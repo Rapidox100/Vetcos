@@ -674,3 +674,11 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .kick::before,.kick--l::before{background-position:center,center;background-size:26px,auto}
 .kick::before,.kick--l::before{background-size:23px,auto}
 @media(max-width:560px){.kick::before,.kick--l::before{background-size:20px,auto}}
+
+/* no stray caret / selection marks on clicks */
+html{-webkit-tap-highlight-color:transparent}
+body{caret-color:transparent}
+input,textarea,[contenteditable]{caret-color:auto}
+h1,h2,h3,.split,.split *,.kick,.btn,.npill,.pnav,.pnav *,.why__list button,.hs,.hs__l,.pts button,.rail,.rail li,.badge,.marquee,.cpop__card h3,.stats,.hero__stats{-webkit-user-select:none;user-select:none}
+.split .ch::selection,.split::selection{background:transparent}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
