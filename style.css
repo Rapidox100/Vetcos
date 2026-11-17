@@ -781,3 +781,13 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .sys .sys--w h3{color:var(--teal-d)}
 .sys p{color:var(--gray)}
 .sys article::before{content:"";display:block;width:34px;height:4px;border-radius:4px;background:var(--orange);margin-bottom:16px}
+
+/* BUILT FOR INDIA: boxed cards */
+.ind{grid-template-columns:repeat(4,1fr);gap:16px;column-gap:16px}
+.ind li,.ind li:nth-last-child(-n+2){display:block;border:0;border-radius:22px;background:#fff;padding:26px 24px;box-shadow:0 10px 30px rgba(6,74,80,.08);border-top:4px solid var(--orange);transition:.25s}
+.ind li:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(6,74,80,.14)}
+.ind b{display:block;font-size:1.15rem;margin-bottom:8px}
+.ind span{display:block;text-align:left;max-width:none;font-size:.95rem}
+@media(max-width:1020px){.ind{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ind{grid-template-columns:1fr}}
+.india .ind li,.india .ind li:nth-last-child(n){border-top:4px solid var(--orange)!important;border-bottom:0!important}
