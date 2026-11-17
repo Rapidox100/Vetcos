@@ -682,3 +682,39 @@ input,textarea,[contenteditable]{caret-color:auto}
 h1,h2,h3,.split,.split *,.kick,.btn,.npill,.pnav,.pnav *,.why__list button,.hs,.hs__l,.pts button,.rail,.rail li,.badge,.marquee,.cpop__card h3,.stats,.hero__stats{-webkit-user-select:none;user-select:none}
 .split .ch::selection,.split::selection{background:transparent}
 button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+
+/* =====  CONNECTED CARE: all 11 steps visible, zig-zag (6 across, then 5 back)  ===== */
+.rail{margin:0;padding:0;overflow:visible;scroll-snap-type:none}
+.rail ol{display:grid;grid-template-columns:repeat(60,1fr);gap:34px 0;width:100%;padding:0}
+.rail li{flex:none;min-height:0;grid-column:span 10;position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-areas:"n t" "n s" "i i";column-gap:10px;row-gap:0;align-items:center;
+  background:#fff;color:var(--ink);border:0;border-radius:22px;padding:16px 16px 16px;margin:0 7px;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.rail li:nth-child(n+7){grid-column:span 12;grid-row:2}
+.rail li:nth-child(11){grid-column:1/13}.rail li:nth-child(10){grid-column:13/25}.rail li:nth-child(9){grid-column:25/37}.rail li:nth-child(8){grid-column:37/49}.rail li:nth-child(7){grid-column:49/61}
+.rail li span{grid-area:n;align-self:start;margin:0;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-size:.78rem;font-weight:800;line-height:1;letter-spacing:0;color:#fff;background:#3b82f6}
+.rail li b{grid-area:t;align-self:end;font-size:.95rem;line-height:1.2;color:var(--ink)}
+.rail li small{grid-area:s;align-self:start;font-size:.78rem;color:var(--gray);line-height:1.3;margin-bottom:12px}
+.rail li img{grid-area:i;width:100%;height:auto;aspect-ratio:2.1/1;object-fit:contain;background:#f4f7fb;border-radius:14px;padding:6px;margin:0}
+.rail li:nth-child(2) span,.rail li:nth-child(7) span{background:#22c55e}
+.rail li:nth-child(3) span{background:#f97316}
+.rail li:nth-child(4) span,.rail li:nth-child(10) span{background:#8b5cf6}
+.rail li:nth-child(5) span,.rail li:nth-child(9) span{background:#ec4899}
+.rail li:nth-child(6) span{background:#f59e0b}
+.rail li:nth-child(8) span,.rail li:nth-child(11) span{background:#3b82f6}
+/* arrows between steps */
+.rail li::after{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);top:50%;margin-top:-11px;background-repeat:no-repeat;background-position:center;background-size:12px}
+.rail li:nth-child(-n+5)::after{right:-18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E")}
+.rail li:nth-child(n+8)::after{right:-18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 5l-7 7 7 7'/%3E%3C/svg%3E")}
+.rail li:nth-child(11)::after{display:none}
+.rail li:nth-child(n+8):nth-child(-n+10)::after{right:-18px}
+.rail li:nth-child(10)::after,.rail li:nth-child(9)::after,.rail li:nth-child(8)::after{display:block}
+.rail li:nth-child(6)::after{right:34px;top:auto;bottom:-28px;margin:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 9l7 7 7-7'/%3E%3C/svg%3E")}
+.rail__ctl{display:none}
+.flow .intel{margin-top:44px}
+@media(max-width:1100px){
+  .rail ol{grid-template-columns:repeat(2,1fr);gap:22px 14px}
+  .rail li,.rail li:nth-child(n+7),.rail li:nth-child(n){grid-column:auto!important;grid-row:auto!important;margin:0}
+  .rail li:nth-child(10),.rail li:nth-child(9),.rail li:nth-child(8),.rail li:nth-child(7),.rail li:nth-child(11){grid-column:auto!important}
+  .rail li::after{display:none!important}
+}
+@media(max-width:560px){.rail ol{grid-template-columns:1fr}}
+@media(max-width:560px){.rail ol{grid-template-columns:1fr 1fr;gap:14px 10px}.rail li{padding:12px;grid-template-columns:auto 1fr;column-gap:8px}.rail li b{font-size:.82rem}.rail li small{font-size:.7rem}.rail li img{aspect-ratio:1.5/1}}
