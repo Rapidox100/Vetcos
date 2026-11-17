@@ -2,65 +2,64 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  // Nav: scrolled state + mobile menu
-  var nav = $('#nav'), burger = $('#burger'), links = $('#navlinks');
-  window.addEventListener('scroll', function () { nav.classList.toggle('scrolled', window.scrollY > 8); }, { passive: true });
+  // Mobile menu
+  var burger = $('#burger'), links = $('#navlinks');
   burger.addEventListener('click', function () {
-    var open = links.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
+    var o = links.classList.toggle('open'); burger.setAttribute('aria-expanded', o);
   });
-  $$('a', links).forEach(function (a) {
-    a.addEventListener('click', function () { links.classList.remove('open'); burger.setAttribute('aria-expanded', false); });
-  });
+  $$('a', links).forEach(function (a) { a.addEventListener('click', function () { links.classList.remove('open'); burger.setAttribute('aria-expanded', false); }); });
 
-  // Tabs (outcomes + roles)
-  $$('[data-tabs]').forEach(function (root) {
-    var tabs = $$('[role=tab]', root), panels = $$('[role=tabpanel]', root);
-    function select(i) {
-      tabs.forEach(function (t, j) { t.setAttribute('aria-selected', i === j); });
-      panels.forEach(function (p, j) { p.hidden = i !== j; p.classList.toggle('is-on', i === j); });
-    }
-    tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { select(i); });
-      t.addEventListener('keydown', function (e) {
-        var n = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
-        if (n) { e.preventDefault(); var k = (i + n + tabs.length) % tabs.length; select(k); tabs[k].focus(); }
-      });
-    });
-  });
-
-  // Workflow explorer
-  var flow = $('[data-flow]');
-  if (flow) {
-    var btns = $$('.flow__steps button', flow), ot = $('[data-out-t]', flow), od = $('[data-out-d]', flow);
-    btns.forEach(function (b, i) {
-      b.setAttribute('data-n', i + 1);
-      var s = b.querySelector('span'); b.setAttribute('aria-label', 'Step ' + (i + 1) + ': ' + b.dataset.t);
-      b.addEventListener('click', function () {
-        btns.forEach(function (x) { x.classList.remove('is-on'); });
-        b.classList.add('is-on'); ot.textContent = (i + 1) + '. ' + b.dataset.t; od.textContent = b.dataset.d;
-      });
-    });
-    ot.textContent = '1. ' + btns[0].dataset.t;
-    // gentle auto-play until the user interacts
-    var idx = 0, auto = null, touched = false;
-    var vis = new IntersectionObserver(function (en) {
-      if (touched) return;
-      if (en[0].isIntersecting) { auto = setInterval(function () { idx = (idx + 1) % btns.length; btns[idx].click(); }, 2600); }
-      else clearInterval(auto);
-    }, { threshold: .4 });
-    vis.observe(flow);
-    flow.addEventListener('pointerdown', function () { touched = true; clearInterval(auto); });
+  // Why Vetcos accordion + screenshot swap
+  var items = $$('#whyList > li'), shots = $$('.why__shot img');
+  function pick(i) {
+    items.forEach(function (li, j) { li.classList.toggle('is-on', i === j); });
+    shots.forEach(function (im, j) { im.classList.toggle('on', i === j); });
   }
+  items.forEach(function (li, i) { $('button', li).addEventListener('click', function () { pick(i); }); });
 
-  // Scroll reveal (+ chart animations)
-  $$('.sec__head,.stats,.dash,.phone,.grid8 article,.role,.story > *,.form,.demo__copy,.analytics__copy,.wa__copy,.clinic').forEach(function (el) { el.classList.add('rv'); });
+  // Clinic hotspots
+  var fig = $('#clinicFig'), pop = $('#pop'), popT = $('#popT'), pts = $$('#pts button');
+  pts.forEach(function (b) {
+    b.addEventListener('click', function () {
+      pts.forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on'); fig.classList.add('on');
+      popT.textContent = b.textContent; pop.hidden = false;
+    });
+  });
+  $('.pop__x').addEventListener('click', function () {
+    pop.hidden = true; fig.classList.remove('on'); pts.forEach(function (x) { x.classList.remove('on'); });
+  });
+
+  // Workflow rail
+  var rail = $('#rail'), bar = $('#bar');
+  function step() { return rail.querySelector('li').offsetWidth + 18; }
+  $('#next').addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: 'smooth' }); });
+  $('#prev').addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  function prog() {
+    var max = rail.scrollWidth - rail.clientWidth;
+    bar.style.width = (10 + (max > 0 ? rail.scrollLeft / max : 0) * 90) + '%';
+  }
+  rail.addEventListener('scroll', prog, { passive: true }); prog();
+
+  // Pet parent stories
+  var qs = $$('#quotes figure'), qd = $$('#qdots button'), qi = 0, timer;
+  function showQ(i) {
+    qi = i;
+    qs.forEach(function (f, j) { f.classList.toggle('on', j === i); });
+    qd.forEach(function (d, j) { d.classList.toggle('on', j === i); });
+  }
+  function auto() { clearInterval(timer); timer = setInterval(function () { showQ((qi + 1) % qs.length); }, 6000); }
+  qd.forEach(function (d, i) { d.addEventListener('click', function () { showQ(i); auto(); }); });
+  auto();
+
+  // Scroll reveal (also triggers chart animations)
+  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.pts,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.form,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
     en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
   $$('.rv').forEach(function (el) { io.observe(el); });
 
-  // Demo form: validate, then open a pre-filled email to the sales inbox
+  // Demo form: validate, then open a pre-filled email
   var form = $('#demoForm'), note = $('#formNote');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
