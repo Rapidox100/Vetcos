@@ -666,3 +666,6 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .kick:has(.vw){padding-top:12px;padding-bottom:10px}
 .sec__h--c .kick{display:inline-block}
 @media(max-width:560px){.kick{padding:10px 16px 10px 10px;white-space:normal}.kick::before{margin-right:9px}}
+.kick::before{background-size:23px,auto}
+.kick--l::before{background-size:23px,auto}
+@media(max-width:560px){.kick::before,.kick--l::before{background-size:19px,auto}}
