@@ -949,20 +949,6 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .role__t h3{font-size:1.45rem}
 }
 
-/* GRADIENT BACKGROUNDS: Teams -> Pet parent story (they blend into each other) */
-.teams{background:
-  radial-gradient(620px 420px at 100% 0%,rgba(0,179,181,.16),transparent 70%),
-  radial-gradient(560px 420px at 0% 100%,rgba(248,104,0,.10),transparent 70%),
-  linear-gradient(180deg,#fef9f3 0%,#f3f9f4 55%,#e6f6f3 100%)}
-.story{background:
-  radial-gradient(640px 460px at 0% 0%,rgba(0,179,181,.16),transparent 70%),
-  radial-gradient(620px 460px at 100% 100%,rgba(248,104,0,.18),transparent 70%),
-  linear-gradient(180deg,#e6f6f3 0%,#f6f3e8 45%,#fff0df 100%)}
-.teams{background:
-  radial-gradient(640px 440px at 100% 0%,rgba(0,179,181,.16),transparent 70%),
-  radial-gradient(520px 380px at 0% 40%,rgba(248,104,0,.08),transparent 70%),
-  linear-gradient(180deg,#fef9f3 0%,#f3f9f4 55%,#e6f6f3 100%)}
-.story{background:
-  radial-gradient(640px 460px at 0% 55%,rgba(0,179,181,.14),transparent 70%),
-  radial-gradient(620px 460px at 100% 100%,rgba(248,104,0,.18),transparent 70%),
-  linear-gradient(180deg,#e6f6f3 0%,#f6f3e8 45%,#fff0df 100%)}
+/* TWO SEPARATE GRADIENTS: Teams (cool mint) and Pet parent story (warm peach) */
+.teams{background:linear-gradient(165deg,#f4fbf9 0%,#dff4f1 55%,#c9ece8 100%)}
+.story{background:linear-gradient(165deg,#fff6ea 0%,#ffe9d2 55%,#ffd9b5 100%)}
