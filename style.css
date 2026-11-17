@@ -828,3 +828,59 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .sys .sys--w h3{font-size:1.15rem}
   .sys p{font-size:.8rem;line-height:1.4}
 }
+
+/* =====  MOBILE ONLY (<=560px): compact sections, less scrolling  ===== */
+@media(max-width:560px){
+  /* Built for India: 2 per row */
+  .ind{grid-template-columns:1fr 1fr;gap:10px}
+  .india .ind li,.india .ind li:nth-last-child(n){padding:16px 14px;border-radius:16px}
+  .ind b{font-size:.98rem;margin-bottom:5px;line-height:1.2}
+  .ind span{font-size:.8rem;line-height:1.4}
+  .india .sec__h{margin-bottom:26px}
+
+  /* Connected care: smaller cards */
+  .rail ol{gap:10px 8px}
+  .rail li{padding:10px;border-radius:16px;column-gap:7px}
+  .rail li span{width:22px;height:22px;font-size:.7rem}
+  .rail li b{font-size:.78rem}
+  .rail li small{font-size:.66rem;margin-bottom:6px}
+  .rail li img{aspect-ratio:2/1;padding:3px;border-radius:10px}
+  .flow .intel{margin-top:26px;gap:10px}
+  .flow .intel>b{font-size:1.1rem;width:100%}
+
+  /* WhatsApp: smaller phone, cards 2 per row */
+  .wa__stage{grid-template-columns:1fr 1fr;gap:10px;max-width:none}
+  .wa__side{display:contents}
+  .phone{grid-column:1/-1;width:230px;border-radius:36px;padding:7px}
+  .phone__scr{min-height:400px;border-radius:30px}
+  .phone__notch{top:14px;width:70px;height:20px}
+  .phone__h{padding:36px 10px 8px;gap:6px}
+  .phone__av{width:28px;height:28px}
+  .phone__who b{font-size:.7rem}
+  .phone__ic svg{width:12px;height:12px}
+  .phone__b{padding:10px 8px;gap:7px}
+  .msg{font-size:.7rem;padding:9px 10px}
+  .msg a{padding:5px;font-size:.7rem;margin-top:8px}
+  .msg--img{width:68%}
+  .phone__f{padding:7px 8px 10px}.phone__f span{padding:8px 12px;font-size:.68rem}.phone__f i{width:32px;height:32px}
+  .wa__side li.wc{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 12px;border-radius:16px}
+  .wc__i{width:34px;height:34px}.wc__i svg{width:17px;height:17px}
+  .wc b{font-size:.84rem;line-height:1.2}
+  .wc small{font-size:.72rem}
+  .wa .sec__h{margin-bottom:28px}
+  .wa__tag{margin-top:34px}
+
+  /* Why Vetcos: tighter */
+  .why__shot{aspect-ratio:16/11;border-radius:22px}
+  .why__grid{gap:20px}
+  .why__list{gap:10px}
+  .why__list button{padding:12px 50px 12px 12px;gap:12px}
+  .why__list .n{width:36px;height:36px;font-size:.9rem}
+  .why__list .t{font-size:1rem}
+  .why__list .t small{font-size:.78rem;margin-top:2px}
+  .why__list button::after{width:26px;height:26px;margin-top:-13px;right:12px;background-size:13px}
+  .why__more p{font-size:.92rem;margin-bottom:10px}
+  .why__list .link{padding:10px 18px;font-size:.88rem}
+  .why .sec__h{margin-bottom:26px}
+}
+@media(max-width:560px){.why__more .chips{gap:6px;margin-bottom:12px}.why__more .chips li{font-size:.74rem;padding:4px 10px}}
