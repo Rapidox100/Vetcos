@@ -496,3 +496,25 @@ body{background:var(--cream)}
   -webkit-mask-image:radial-gradient(circle var(--r,0px) at var(--mx,-400px) var(--my,-400px),#000 45%,transparent 100%);
           mask-image:radial-gradient(circle var(--r,0px) at var(--mx,-400px) var(--my,-400px),#000 45%,transparent 100%)}
 @media(hover:none){.clinic__fig .co{-webkit-mask-image:none;mask-image:none}}
+
+
+/* CLINIC POPUP (centred modal, like the original) */
+.cpop{position:fixed;inset:0;z-index:2500;background:rgba(7,24,32,.62);display:grid;place-items:center;padding:20px;backdrop-filter:blur(3px)}
+.cpop[hidden]{display:none}
+.cpop__card{position:relative;width:min(460px,100%);background:#fff;color:var(--ink);border-radius:26px;padding:30px 28px 26px;box-shadow:0 30px 70px rgba(0,0,0,.35);animation:cpin .24s ease}
+@keyframes cpin{from{opacity:0;transform:translateY(12px) scale(.98)}}
+.cpop__x{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;background:#f0f5f4;font-size:1.5rem;line-height:1;display:grid;place-items:center;transition:.2s}
+.cpop__x:hover{background:var(--orange);color:#fff}
+.cpop__ico{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;margin-bottom:16px}
+.cpop__card h3{font-family:var(--serif);font-weight:400;font-size:2.1rem;line-height:1;letter-spacing:-.01em;padding-right:40px;margin-bottom:8px}
+.cpop__sub{color:var(--gray);margin-bottom:18px}
+.cpop__card ul{display:grid;gap:10px;margin-bottom:24px}
+.cpop__card li{position:relative;padding-left:20px;font-size:.96rem;line-height:1.45}
+.cpop__card li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.cpop__cta{width:100%}
+.cpop__card.tone-green .cpop__ico{background:#eaf9ef;color:#00a3a5}
+.cpop__card.tone-lilac .cpop__ico{background:#f4f0fd;color:#7a5cff}
+.cpop__card.tone-blue .cpop__ico{background:#eef4fc;color:#2f6fdb}
+.cpop__card.tone-rose .cpop__ico{background:#fdf0f6;color:#c43d78}
+.cpop__card.tone-orange .cpop__ico{background:#fff4eb;color:#e36a12}
+.cpop__card.tone-sky .cpop__ico{background:#eef9fd;color:#0b8eaa}

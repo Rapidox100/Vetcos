@@ -199,20 +199,15 @@
   <figure class="clinic__fig" id="clinicFig">
     <img class="sk" src="assets/clinic-sketch.jpg" alt="Pencil sketch of a veterinary clinic, from appointments and records through consultations, lab, pharmacy, in-patient care, and reports." width="1024" height="408">
     <img class="co" src="assets/clinic-color.jpg" alt="" aria-hidden="true" width="1024" height="408">
-    <button class="hs hs--r" style="--x:32;--y:25" data-n="Consultations" aria-label="Consultations"><i></i><span class="hs__l">Consultations</span></button>
-    <button class="hs hs--l" style="--x:26;--y:34" data-n="Records" aria-label="Records"><i></i><span class="hs__l">Records</span></button>
-    <button class="hs hs--r" style="--x:26;--y:65" data-n="Appointments" aria-label="Appointments"><i></i><span class="hs__l">Appointments</span></button>
-    <button class="hs hs--l" style="--x:48;--y:54" data-n="Multi-Branch" aria-label="Multi-Branch"><i></i><span class="hs__l">Multi-Branch</span></button>
-    <button class="hs hs--r" style="--x:55;--y:29" data-n="Lab &amp; Imaging" aria-label="Lab &amp; Imaging"><i></i><span class="hs__l">Lab &amp; Imaging</span></button>
-    <button class="hs hs--r" style="--x:74;--y:31" data-n="Pharmacy" aria-label="Pharmacy"><i></i><span class="hs__l">Pharmacy</span></button>
-    <button class="hs hs--l" style="--x:70;--y:54" data-n="Reports" aria-label="Reports"><i></i><span class="hs__l">Reports</span></button>
-    <button class="hs hs--r" style="--x:56;--y:64" data-n="Billing" aria-label="Billing"><i></i><span class="hs__l">Billing</span></button>
-    <button class="hs hs--l" style="--x:86;--y:45" data-n="In-Patient" aria-label="In-Patient"><i></i><span class="hs__l">In-Patient</span></button>
-    <div class="pop" id="pop" hidden>
-      <button class="pop__x" aria-label="Close">×</button>
-      <b id="popT"></b>
-      <a href="#demo" class="btn btn--o">Book a demo</a>
-    </div>
+    <button class="hs hs--r" style="--x:22;--y:62" data-pin="appointments" aria-label="Open Appointments &amp; Queue details"><i></i><span class="hs__l">Appointments</span></button>
+    <button class="hs hs--r" style="--x:27;--y:38" data-pin="records" aria-label="Open Patient Records details"><i></i><span class="hs__l">Records</span></button>
+    <button class="hs hs--r" style="--x:34;--y:22" data-pin="consult" aria-label="Open Consultations details"><i></i><span class="hs__l">Consultations</span></button>
+    <button class="hs hs--r" style="--x:44;--y:58" data-pin="branches" aria-label="Open Multi-Branch Management details"><i></i><span class="hs__l">Multi-Branch</span></button>
+    <button class="hs hs--r" style="--x:54;--y:28" data-pin="lab" aria-label="Open Vaccination, Lab &amp; Imaging details"><i></i><span class="hs__l">Lab &amp; Imaging</span></button>
+    <button class="hs hs--r" style="--x:58;--y:62" data-pin="billing" aria-label="Open Billing &amp; Payments details"><i></i><span class="hs__l">Billing</span></button>
+    <button class="hs hs--r" style="--x:70;--y:24" data-pin="pharmacy" aria-label="Open Pharmacy &amp; Inventory details"><i></i><span class="hs__l">Pharmacy</span></button>
+    <button class="hs hs--l" style="--x:78;--y:52" data-pin="reports" aria-label="Open Reports &amp; Analytics details"><i></i><span class="hs__l">Reports</span></button>
+    <button class="hs hs--l" style="--x:91;--y:42" data-pin="inpatient" aria-label="Open In-Patient Care details"><i></i><span class="hs__l">In-Patient</span></button>
   </figure>
 </section>
 
@@ -402,6 +397,17 @@
   <img class="foot__wm" src="assets/vetcos-watermark.png" alt="" aria-hidden="true">
   <div class="foot__bar"><span>© 2026 Vetcos · The Future of Vet Care</span><span>Made with care in Kerala, India</span></div>
 </footer>
+
+<div class="cpop" id="cpop" hidden>
+  <div class="cpop__card" role="dialog" aria-modal="true" aria-labelledby="cpopT">
+    <button class="cpop__x" aria-label="Close">×</button>
+    <div class="cpop__ico" id="cpopI"></div>
+    <h3 id="cpopT"></h3>
+    <p class="cpop__sub" id="cpopS"></p>
+    <ul id="cpopL"></ul>
+    <a href="#demo" class="btn btn--o btn--lg cpop__cta">Book a demo</a>
+  </div>
+</div>
 
 <dialog class="modal" id="demoModal" aria-label="Request a demo">
   <button class="modal__x" id="modalX" aria-label="Close">×</button>
