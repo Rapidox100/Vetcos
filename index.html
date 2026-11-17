@@ -360,17 +360,11 @@
       <li><a href="https://www.vetcos.com">www.vetcos.com</a></li>
     </ul>
   </div>
-  <form class="form" id="demoForm" novalidate>
-    <label>Clinic / hospital name *<input name="clinic" required placeholder="Happy Tails Veterinary Clinic" autocomplete="organization"></label>
-    <div class="two">
-      <label>Your name *<input name="name" required placeholder="Dr. Arya Nair" autocomplete="name"></label>
-      <label>Work email *<input name="email" type="email" required placeholder="you@clinic.com" autocomplete="email"></label>
-    </div>
-    <label>Phone<input name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel"></label>
-    <label>Anything we should know?<textarea name="notes" rows="3" placeholder="Number of vets, branches, current software..."></textarea></label>
-    <button class="btn btn--o btn--lg" type="submit">Request my demo</button>
-    <p class="form__n" id="formNote">30-minute walkthrough · No commitment · Response within one business day</p>
-  </form>
+  <div class="demo__card">
+    <b>Request a Demo</b>
+    <p>30-minute walkthrough · No commitment · Response within one business day</p>
+    <a href="#demo" class="btn btn--o btn--lg">Request my demo</a>
+  </div>
 </section>
 
 </main>
@@ -385,6 +379,22 @@
   <img class="foot__wm" src="assets/vetcos-watermark.png" alt="" aria-hidden="true">
   <div class="foot__bar"><span>© 2026 Vetcos · The Future of Vet Care</span><span>Made with care in Kerala, India</span></div>
 </footer>
+
+<dialog class="modal" id="demoModal" aria-label="Request a demo">
+  <button class="modal__x" id="modalX" aria-label="Close">×</button>
+  <form class="form" id="demoForm" novalidate>
+    <h3 class="form__t">Request a Demo</h3>
+    <label>Clinic / hospital name *<input name="clinic" required placeholder="Happy Tails Veterinary Clinic" autocomplete="organization"></label>
+    <div class="two">
+      <label>Your name *<input name="name" required placeholder="Dr. Arya Nair" autocomplete="name"></label>
+      <label>Work email *<input name="email" type="email" required placeholder="you@clinic.com" autocomplete="email"></label>
+    </div>
+    <label>Phone<input name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel"></label>
+    <label>Anything we should know?<textarea name="notes" rows="3" placeholder="Number of vets, branches, current software..."></textarea></label>
+    <button class="btn btn--o btn--lg" type="submit">Request my demo</button>
+    <p class="form__n" id="formNote">30-minute walkthrough · No commitment · Response within one business day</p>
+  </form>
+</dialog>
 
 <script src="site.js"></script>
 </body>

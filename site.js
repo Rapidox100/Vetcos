@@ -53,11 +53,23 @@
   auto();
 
   // Scroll reveal (also triggers chart animations)
-  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.pts,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.form,.intel').forEach(function (el) { el.classList.add('rv'); });
+  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.pts,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo__card,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
     en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
   }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
   $$('.rv').forEach(function (el) { io.observe(el); });
+
+  // Demo modal: every "Request a demo" / "Book a demo" link opens the box
+  var modal = $('#demoModal');
+  function openModal(e) {
+    if (e) e.preventDefault();
+    links.classList.remove('open'); burger.setAttribute('aria-expanded', false);
+    if (!modal.open) modal.showModal();
+    var f = $('input', modal); if (f) f.focus();
+  }
+  $$('a[href="#demo"]').forEach(function (a) { a.addEventListener('click', openModal); });
+  $('#modalX').addEventListener('click', function () { modal.close(); });
+  modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
 
   // Demo form: validate, then open a pre-filled email
   var form = $('#demoForm'), note = $('#formNote');
