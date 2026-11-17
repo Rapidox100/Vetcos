@@ -815,3 +815,16 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .pet{position:absolute !important;right:-18px !important;bottom:-70px !important;width:290px !important;margin:0 !important;border-radius:20px !important;grid-column:auto !important}
   .owner{overflow:hidden}
 }
+
+/* MOBILE ONLY: compact "Simplicity at the core" cards (2 per row) */
+@media(max-width:560px){
+  .platform .sec__h{margin-bottom:26px}
+  .platform .sec__h p:not(.kick){font-size:1rem;line-height:1.5}
+  .sys{grid-template-columns:1fr 1fr;gap:10px}
+  .sys article,.sys .sys--w{grid-column:span 1;padding:16px 14px;border-radius:18px}
+  .sys .sys--w,.sys .sys--w:last-child{grid-column:1/-1}
+  .sys article::before{width:24px;height:3px;margin-bottom:10px}
+  .sys h3,.sys .sys--w h3{font-size:1.02rem;line-height:1.15;margin-bottom:6px}
+  .sys .sys--w h3{font-size:1.15rem}
+  .sys p{font-size:.8rem;line-height:1.4}
+}
