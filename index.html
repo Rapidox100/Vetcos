@@ -13,19 +13,36 @@
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <a href="#top" class="nav__logo"><img src="assets/vetcos-logo.png" alt="Vetcos" width="120" height="46"></a>
-  <nav class="nav__links" id="navlinks" aria-label="Primary">
-    <a href="#why">Why Vetcos</a>
-    <a href="#owner">Owner analytics</a>
-    <a href="#whatsapp">WhatsApp</a>
-    <a href="#parents">Pet parents</a>
-    <a href="#platform">Platform</a>
-    <a href="#teams">Teams</a>
-    <a href="#demo" class="nav__cta-m">Request a Demo</a>
+<header class="pnav" id="nav">
+  <nav class="pnav__bar" aria-label="Primary">
+    <a class="pnav__logo" id="pnavLogo" href="#top" aria-label="Vetcos home"><img src="assets/vetcos-emblem.jpg" alt="Vetcos" width="48" height="48"></a>
+    <div class="pnav__items" id="pnavItems">
+      <ul role="menubar">
+        <li><a class="npill" href="#why"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">Why Vetcos</span><span class="plh" aria-hidden="true">Why Vetcos</span></span></a></li>
+        <li><a class="npill" href="#owner"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">Owner analytics</span><span class="plh" aria-hidden="true">Owner analytics</span></span></a></li>
+        <li><a class="npill" href="#whatsapp"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">WhatsApp</span><span class="plh" aria-hidden="true">WhatsApp</span></span></a></li>
+        <li><a class="npill" href="#parents"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">Pet parents</span><span class="plh" aria-hidden="true">Pet parents</span></span></a></li>
+        <li><a class="npill" href="#platform"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">Platform</span><span class="plh" aria-hidden="true">Platform</span></span></a></li>
+        <li><a class="npill" href="#teams"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">Teams</span><span class="plh" aria-hidden="true">Teams</span></span></a></li>
+        <li><a class="npill npill--cta" href="#demo"><span class="hc" aria-hidden="true"></span><span class="ls"><span class="pl">Request a Demo</span><span class="plh" aria-hidden="true">Request a Demo</span></span></a></li>
+      </ul>
+    </div>
+    <button class="pnav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
+      <svg class="i-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="i-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </nav>
-  <a href="#demo" class="btn btn--o nav__cta">Request a Demo</a>
-  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  <div class="pnav__menu" id="navlinks">
+    <ul>
+      <li><a href="#why">Why Vetcos</a></li>
+      <li><a href="#owner">Owner analytics</a></li>
+      <li><a href="#whatsapp">WhatsApp</a></li>
+      <li><a href="#parents">Pet parents</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#teams">Teams</a></li>
+      <li><a href="#demo" class="m-cta">Request a Demo</a></li>
+    </ul>
+  </div>
 </header>
 
 <main>
@@ -396,6 +413,7 @@
   </form>
 </dialog>
 
+<script src="assets/gsap.min.js"></script>
 <script src="site.js"></script>
 </body>
 </html>
