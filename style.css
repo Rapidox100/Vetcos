@@ -718,3 +718,15 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 }
 @media(max-width:560px){.rail ol{grid-template-columns:1fr}}
 @media(max-width:560px){.rail ol{grid-template-columns:1fr 1fr;gap:14px 10px}.rail li{padding:12px;grid-template-columns:auto 1fr;column-gap:8px}.rail li b{font-size:.82rem}.rail li small{font-size:.7rem}.rail li img{aspect-ratio:1.5/1}}
+
+/* CLINIC: bigger illustration, less dead space */
+.clinic{padding-top:clamp(56px,6vw,90px);padding-bottom:clamp(56px,6vw,90px)}
+.clinic .sec__h{margin-bottom:28px}
+.clinic__fig{max-width:min(1500px,calc(100vw - 40px));width:100%;margin-inline:auto}
+@media(min-width:1100px){.clinic{padding-left:20px;padding-right:20px}}
+.hs i{left:-20px;top:-20px;width:40px;height:40px}
+.hs i::before{width:16px;height:16px}
+.hs__l{font-size:1.02rem;padding:9px 18px}
+.hs--r .hs__l{left:28px}.hs--l .hs__l{right:28px}
+@media(max-width:1000px){.hs i{left:-15px;top:-15px;width:30px;height:30px}.hs i::before{width:12px;height:12px}.hs__l{font-size:.85rem;padding:7px 12px}}
+@media(max-width:760px){.hs__l{display:none}.hs i{left:-12px;top:-12px;width:24px;height:24px}.hs i::before{width:10px;height:10px}}
