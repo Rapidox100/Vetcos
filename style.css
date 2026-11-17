@@ -642,3 +642,18 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .kick::before{width:28px;height:28px;background:var(--paw-o) center/19px no-repeat,#fff;box-shadow:inset 0 0 0 1px rgba(0,179,181,.25)}
 .kick--l::before{background:var(--paw-o) center/19px no-repeat,#fff;box-shadow:none}
 @media(max-width:560px){.kick::before{width:24px;height:24px;background-size:16px,auto}}
+
+
+/* DISSOLVED LOGO BACKDROP: soft out-of-focus emblems that fade away toward the section edges.
+   The pattern lives in a ::before layer (masked), not in the section background. */
+.hero,.sec.dark,.foot{position:relative;isolation:isolate}
+.hero{background-image:radial-gradient(760px 560px at 88% 12%,rgba(0,179,181,.22),transparent 70%),radial-gradient(520px 420px at 0% 100%,rgba(248,104,0,.13),transparent 70%)}
+.sec.dark{background-image:none}
+.owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(0,179,181,.35),transparent 70%)}
+.demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.2),transparent 70%)}
+.foot{background-image:none}
+.hero::before,.sec.dark::before,.foot::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-size:480px 480px;background-repeat:repeat;
+  -webkit-mask-image:radial-gradient(ellipse 65% 70% at 88% 18%,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%),radial-gradient(ellipse 55% 60% at 6% 92%,#000 0%,rgba(0,0,0,.5) 40%,transparent 100%);
+          mask-image:radial-gradient(ellipse 65% 70% at 88% 18%,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%),radial-gradient(ellipse 55% 60% at 6% 92%,#000 0%,rgba(0,0,0,.5) 40%,transparent 100%)}
+.hero::before{background-image:var(--paw-t)}
+.sec.dark::before,.foot::before{background-image:var(--paw-w)}
