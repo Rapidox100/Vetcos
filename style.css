@@ -772,3 +772,12 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 /* footer: no background logos */
 .foot::before{display:none!important;background-image:none!important}
 .foot{background-image:none!important}
+
+/* SYSTEM CARDS: white instead of green boxes */
+.sys article{background:#fff;border:1px solid rgba(255,255,255,.9);box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.sys article:hover{border-color:var(--orange);transform:translateY(-4px)}
+.sys h3,.sys .sys--w h3{color:var(--ink)}
+.sys .sys--w{background:linear-gradient(140deg,#fff,#eefaf9)}
+.sys .sys--w h3{color:var(--teal-d)}
+.sys p{color:var(--gray)}
+.sys article::before{content:"";display:block;width:34px;height:4px;border-radius:4px;background:var(--orange);margin-bottom:16px}
