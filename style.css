@@ -1,9 +1,11 @@
 :root{
-  --ink:#071820; --ink2:#0e2a37; --ink3:#16384a;
-  --paper:#f2f6f5; --white:#fff;
-  --teal:#00a8a8; --teal-d:#007b7d; --teal-l:#d8f3f1;
-  --orange:#ff7a1a; --orange-d:#e86a0c;
-  --gray:#5b6d75; --line:#dbe4e3; --line-d:rgba(255,255,255,.14);
+  /* Vetcos brand (from logo) */
+  --teal:#00b3b5; --teal-d:#007f83; --teal-l:#dff6f4; --mint:#e8f8f6;
+  --orange:#f86800; --orange-d:#d85a00; --peach:#fff1e2;
+  --cream:#fef9f3; --cream2:#faf3e8; --paper:#fef9f3; --white:#fff;
+  --ink:#0b2430;                       /* text navy */
+  --deep:#064a50; --ink2:#0a5a61; --ink3:#0e6e75;   /* deep-teal surfaces */
+  --gray:#5b6d75; --line:#e8e0d4; --line-d:rgba(255,255,255,.16);
   --serif:'Instrument Serif',Georgia,serif; --sans:'Inter Tight',system-ui,sans-serif;
   --pad:max(20px,calc((100% - 1320px)/2));
 }
@@ -390,3 +392,80 @@ figcaption b{display:block;color:var(--teal-d);margin-bottom:6px}
 .demo__card b{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1}
 .demo__card p{color:var(--gray)}
 body:has(dialog[open]){overflow:hidden}
+
+
+/* =====================  VETCOS BRAND THEME  ===================== */
+:root{
+  --paw-t:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='%2300b3b5' fill-opacity='.055' transform='rotate(-22 75 75)'%3E%3Cellipse cx='75' cy='92' rx='18' ry='15'/%3E%3Cellipse cx='50' cy='66' rx='7.5' ry='10'/%3E%3Cellipse cx='66' cy='53' rx='7.5' ry='10'/%3E%3Cellipse cx='84' cy='53' rx='7.5' ry='10'/%3E%3Cellipse cx='100' cy='66' rx='7.5' ry='10'/%3E%3C/g%3E%3C/svg%3E");
+  --paw-w:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='%23ffffff' fill-opacity='.06' transform='rotate(-22 75 75)'%3E%3Cellipse cx='75' cy='92' rx='18' ry='15'/%3E%3Cellipse cx='50' cy='66' rx='7.5' ry='10'/%3E%3Cellipse cx='66' cy='53' rx='7.5' ry='10'/%3E%3Cellipse cx='84' cy='53' rx='7.5' ry='10'/%3E%3Cellipse cx='100' cy='66' rx='7.5' ry='10'/%3E%3C/g%3E%3C/svg%3E");
+  --paw-o:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='%23f86800'%3E%3Cellipse cx='20' cy='26' rx='9' ry='7.5'/%3E%3Cellipse cx='8.5' cy='16' rx='3.6' ry='5'/%3E%3Cellipse cx='16' cy='9.5' rx='3.6' ry='5'/%3E%3Cellipse cx='24' cy='9.5' rx='3.6' ry='5'/%3E%3Cellipse cx='31.5' cy='16' rx='3.6' ry='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+body{background:var(--cream)}
+
+/* paw eyebrow */
+.kick{display:inline-flex;align-items:center;gap:9px}
+.kick::before{content:"";width:20px;height:20px;background:var(--paw-o) center/contain no-repeat;flex:none}
+.sec__h--c .kick{justify-content:center}
+
+/* NAV: deep-teal pills with white pills, orange CTA */
+.pnav{--base:var(--deep);--pill-bg:#fff;--pill-text:var(--ink)}
+.pnav__logo{box-shadow:0 8px 24px rgba(6,74,80,.22),0 0 0 3px #fff}
+.pnav__items,.pnav__burger{border-color:rgba(255,255,255,.18);box-shadow:0 8px 26px rgba(6,74,80,.28)}
+.pnav__burger{background:var(--deep)}
+.pnav__menu{background:var(--deep)}
+
+/* HERO: light, friendly, on-brand */
+.hero{background:var(--cream);color:var(--ink);
+  background-image:radial-gradient(760px 560px at 88% 12%,rgba(0,179,181,.22),transparent 70%),
+                   radial-gradient(520px 420px at 0% 100%,rgba(248,104,0,.13),transparent 70%),var(--paw-t);
+  background-size:auto,auto,150px}
+.hero h1>span:last-child{color:var(--teal)}
+.hero__sub{color:var(--ink)}
+.hero__vals{color:var(--gray)}
+.hero .btn--line{border-color:var(--ink);color:var(--ink)}
+.hero .btn--line:hover{background:var(--ink);color:#fff}
+.hero__r::before{content:"";position:absolute;inset:6% -10% 0 -8%;border-radius:50%;background:radial-gradient(circle at 40% 40%,#9fe6e3,var(--teal));opacity:.35;filter:blur(2px)}
+.arch{box-shadow:0 30px 70px rgba(6,74,80,.25);border:6px solid #fff;position:relative}
+.orb{border-color:#fff;box-shadow:0 14px 36px rgba(6,74,80,.3)}
+.badge{box-shadow:0 14px 36px rgba(6,74,80,.22)}
+.hero__stats{border-top:1px solid var(--line)}
+.hero__stats div+div{border-left:1px solid var(--line)}
+.hero__stats dd{color:var(--teal-d)}
+.hero__stats dt{color:var(--gray)}
+
+.marquee{background:var(--teal);color:#fff}
+.marquee span::after{color:var(--peach)}
+
+/* DARK SECTIONS -> deep Vetcos teal with paw texture */
+.sec.dark{background-color:var(--deep);background-image:var(--paw-w);background-size:150px}
+.owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(0,179,181,.35),transparent 70%),var(--paw-w);background-size:auto,150px}
+.demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.2),transparent 70%),var(--paw-w);background-size:auto,150px}
+.dark em{color:#7ff0e9}
+.kick--l{color:#7ff0e9}
+.lede,.sec.dark .sec__h p:not(.kick),.sys p,.contact{color:#cfe9ea}
+.sys article{border-color:rgba(255,255,255,.16)}
+.rail li{border-color:rgba(255,255,255,.16)}
+.foot{background:#043a40;background-image:var(--paw-w);background-size:150px}
+.pet{background:var(--ink2)}
+
+/* LIGHT SECTIONS: cream / mint / peach rhythm */
+.why{background:var(--cream)}
+.clinic{background:#fff}
+.wa{background:linear-gradient(180deg,var(--mint),var(--cream))}
+.teams{background:var(--cream2)}
+.story{background:var(--peach)}
+.story .secure{background:#fff}
+.india{background:var(--mint)}
+.india .ind li{border-color:rgba(6,74,80,.18)}
+.why__shot{background:linear-gradient(150deg,var(--mint),var(--peach))}
+.chips li{background:var(--mint);color:var(--teal-d)}
+.wa__side--l li{border-right-color:var(--teal)}
+.pill{background:var(--deep)}
+.pts button.on{background:var(--deep);border-color:var(--deep)}
+.pop{background:var(--deep)}
+.btn--o{background:var(--orange)}
+.btn--o:hover{background:var(--orange-d);box-shadow:0 12px 28px rgba(248,104,0,.4)}
+.heading-accent{color:var(--orange)}
+
+/* soft paw divider under the hero marquee & before footer */
+.demo__card,.form{box-shadow:0 30px 80px rgba(2,40,45,.4)}
