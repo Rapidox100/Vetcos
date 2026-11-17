@@ -188,7 +188,7 @@
   auto();
 
   // Scroll reveal (also triggers chart animations)
-  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo__card,.intel').forEach(function (el) { el.classList.add('rv'); });
+  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo>.form,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
     en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
   }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
@@ -207,20 +207,22 @@
   modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
 
   // Demo form: validate, then open a pre-filled email
-  var form = $('#demoForm'), note = $('#formNote');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var ok = true;
-    $$('[required]', form).forEach(function (f) {
-      var bad = !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value));
-      f.classList.toggle('invalid', bad); if (bad) ok = false;
+  $$('form.form').forEach(function (form) {
+    var note = $('.form__n', form);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = true;
+      $$('[required]', form).forEach(function (f) {
+        var bad = !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value));
+        f.classList.toggle('invalid', bad); if (bad) ok = false;
+      });
+      if (!ok) { note.textContent = 'Please fill in the highlighted fields.'; note.classList.remove('ok'); return; }
+      var d = new FormData(form);
+      var body = 'Clinic: ' + d.get('clinic') + '\nName: ' + d.get('name') + '\nEmail: ' + d.get('email') +
+        '\nPhone: ' + (d.get('phone') || '-') + '\n\n' + (d.get('notes') || '');
+      window.location.href = 'mailto:hello@vetcos.com?subject=' + encodeURIComponent('Demo request: ' + d.get('clinic')) + '&body=' + encodeURIComponent(body);
+      note.textContent = 'Thanks! Your email app should open with the request ready to send.';
+      note.classList.add('ok');
     });
-    if (!ok) { note.textContent = 'Please fill in the highlighted fields.'; note.classList.remove('ok'); return; }
-    var d = new FormData(form);
-    var body = 'Clinic: ' + d.get('clinic') + '\nName: ' + d.get('name') + '\nEmail: ' + d.get('email') +
-      '\nPhone: ' + (d.get('phone') || '-') + '\n\n' + (d.get('notes') || '');
-    window.location.href = 'mailto:hello@vetcos.com?subject=' + encodeURIComponent('Demo request: ' + d.get('clinic')) + '&body=' + encodeURIComponent(body);
-    note.textContent = 'Thanks! Your email app should open with the request ready to send.';
-    note.classList.add('ok');
   });
 })();

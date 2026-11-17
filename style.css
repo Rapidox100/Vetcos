@@ -791,3 +791,6 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 @media(max-width:1020px){.ind{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.ind{grid-template-columns:1fr}}
 .india .ind li,.india .ind li:nth-last-child(n){border-top:4px solid var(--orange)!important;border-bottom:0!important}
+
+.demo>.form{max-width:560px;width:100%;justify-self:end}
+@media(max-width:1020px){.demo>.form{justify-self:stretch;max-width:none}}
