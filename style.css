@@ -610,10 +610,18 @@ blockquote{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3vw,2
 @media(max-width:560px){.why__list button{gap:14px;padding:16px 56px 16px 14px}.why__list .n{width:42px;height:42px}.why__list button::after{right:14px;width:30px;height:30px;margin-top:-15px}.why__more{padding:0 16px}}
 
 
-/* VETCOS WORDMARK used in place of the word "Vetcos" */
-.vw{display:inline-block;height:1.08em;width:auto;vertical-align:-.2em;margin:0 .05em;text-transform:none;letter-spacing:0;font-style:normal}
-.npill .vw,.kick .vw{height:1.25em;vertical-align:-.28em}
-.sec.dark .vw,.foot .vw,.pet .vw{filter:drop-shadow(0 0 1.5px rgba(255,255,255,.95)) drop-shadow(0 0 1px rgba(255,255,255,.8))}
+/* VETCOS WORDMARK used in place of the word "Vetcos"
+   Image metrics: letters sit on the bottom edge (baseline) and the "o" is 50% of the image height,
+   so height:1em makes the lowercase letters match the surrounding x-height exactly. */
+.vw{display:inline-block;height:1em;width:auto;vertical-align:-.02em;margin:0 .07em;text-transform:none;letter-spacing:0;font-style:normal;line-height:1;position:relative;top:0}
+.vw:first-child{margin-left:0}.vw:last-child{margin-right:0}
+/* uppercase contexts: caps are taller than x-height, so scale up to keep the lowercase from looking small */
+.npill .vw,.kick .vw{height:1.22em;vertical-align:-.03em;margin:0 .02em 0 .06em}
+.hero .vw{height:1.02em}
+.badge .vw,.phone__h .vw{height:1.05em}
+.foot a .vw,.foot__bar .vw{height:1.05em}
+/* big headings: slight optical bump so the V reads as a capital */
+h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .split .vw.ch{display:inline-block}
-.phone__h .vw{height:1.2em}
-.badge .vw{height:1.1em}
+/* on dark teal surfaces keep the wordmark vivid */
+.sec.dark .vw,.foot .vw{filter:brightness(1.12) saturate(1.1)}
