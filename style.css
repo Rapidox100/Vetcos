@@ -625,3 +625,9 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .split .vw.ch{display:inline-block}
 /* on dark teal surfaces keep the wordmark vivid */
 .sec.dark .vw,.foot .vw{filter:brightness(1.12) saturate(1.1)}
+
+
+/* badges are flex rows: put text + wordmark on one shared baseline (icon stays centred) */
+.kick{align-items:baseline}
+.kick::before{align-self:center}
+.kick .vw{align-self:baseline;vertical-align:baseline;margin:0 .02em 0 -.32em}
