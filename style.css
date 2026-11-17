@@ -657,3 +657,12 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
           mask-image:radial-gradient(ellipse 65% 70% at 88% 18%,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%),radial-gradient(ellipse 55% 60% at 6% 92%,#000 0%,rgba(0,0,0,.5) 40%,transparent 100%)}
 .hero::before{background-image:var(--paw-t)}
 .sec.dark::before,.foot::before{background-image:var(--paw-w)}
+
+
+/* BADGES v2: inline flow (icon + text + wordmark share the text baseline; the pill stays optically centred) */
+.kick{display:inline-block;align-items:normal;line-height:1.2;vertical-align:top;padding:11px 20px 11px 12px;text-align:left;white-space:nowrap}
+.kick::before{display:inline-block;vertical-align:middle;margin:-3px 11px 0 0;position:relative;top:0}
+.kick .vw{align-self:auto;vertical-align:baseline;margin:0 .02em 0 .02em}
+.kick:has(.vw){padding-top:12px;padding-bottom:10px}
+.sec__h--c .kick{display:inline-block}
+@media(max-width:560px){.kick{padding:10px 16px 10px 10px;white-space:normal}.kick::before{margin-right:9px}}
