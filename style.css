@@ -631,3 +631,7 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .kick{align-items:baseline}
 .kick::before{align-self:center}
 .kick .vw{align-self:baseline;vertical-align:baseline;margin:0 .02em 0 -.32em}
+
+/* FOOTER: big full-colour wordmark instead of the faint outline */
+.foot__wm{display:block;width:min(720px,84%);height:auto;margin:56px auto 8px;opacity:1;filter:brightness(1.12) saturate(1.1)}
+@media(max-width:560px){.foot__wm{width:88%;margin:40px auto 4px}}
