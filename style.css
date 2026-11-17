@@ -608,3 +608,43 @@ blockquote{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3vw,2
 .why__list li.is-on .why__more p{color:#d9f1f1}
 .why__list li.is-on .chips li{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22)}
 @media(max-width:560px){.why__list button{gap:14px;padding:16px 56px 16px 14px}.why__list .n{width:42px;height:42px}.why__list button::after{right:14px;width:30px;height:30px;margin-top:-15px}.why__more{padding:0 16px}}
+
+/* =====================  BRAND TEAL (logo "V") REPLACES DEEP GREEN  ===================== */
+:root{--deep:#00a5a8;--ink2:#00969b;--ink3:#00b8b8}
+/* text on teal surfaces -> white */
+.lede,.sec.dark .sec__h p:not(.kick),.sys p,.contact,.contact a,.foot,.foot a,.foot span,.foot__b p,.foot__bar{color:rgba(255,255,255,.92)}
+.foot b{color:#fff}
+.dark em{color:#fff1e2}
+.kick--l{color:#fff}
+.owner__list li{color:#fff}
+.sec.dark h2{color:#fff}
+.rail li small{color:rgba(255,255,255,.88)}
+.rail li{background:linear-gradient(160deg,#00b0b3,var(--ink2));border-color:rgba(255,255,255,.28)}
+.sys article{background:linear-gradient(160deg,#00b0b3,var(--ink2));border-color:rgba(255,255,255,.28)}
+.sys .sys--w{background:linear-gradient(140deg,#fff 0,#fff 0) padding-box,linear-gradient(140deg,#00c2c2,#009a9e);background:linear-gradient(140deg,#00c4c4,#009ca0)}
+.sys .sys--w h3{color:#fff1e2}
+.sys article:hover{border-color:#fff}
+.intel>b{color:#fff}
+.chips--d li{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.35)}
+/* dashboard mock inside the teal section */
+.app__side{color:rgba(255,255,255,.9)}
+.app__side li.on{background:#fff;color:var(--teal-d);font-weight:700}
+.pet{background:var(--ink2);border-color:rgba(255,255,255,.3)}
+.pet small,.pet nav span{color:rgba(255,255,255,.85)}
+.pet nav .on{color:#fff;font-weight:700}
+.pet a{color:#fff1e2}
+/* nav + footer */
+.pnav{--base:var(--deep)}
+.pnav__menu a{color:#fff}
+.foot{background:linear-gradient(180deg,#00a5a8,#008d92);background-image:var(--paw-w),linear-gradient(180deg,#00a5a8,#008d92);background-size:150px,auto}
+.foot__wm{opacity:.22;filter:grayscale(1) brightness(3)}
+.foot__b img{background:#fff}
+.foot a:not(.btn):hover{color:#fff1e2}
+/* why-vetcos active card */
+.why__list li.is-on{background:linear-gradient(145deg,#00a5a8,#009aa0);border-color:#00a5a8;box-shadow:0 22px 50px rgba(0,150,155,.35)}
+.why__list li.is-on .t small,.why__list li.is-on .why__more p{color:#fff}
+/* misc dark chips/pills */
+.pill{background:var(--deep)}
+.pts button.on,.hs:hover .hs__l,.hs.on .hs__l{background:var(--deep);border-color:var(--deep)}
+.demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.28),transparent 70%),var(--paw-w);background-size:auto,150px}
+.owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(255,255,255,.2),transparent 70%),var(--paw-w);background-size:auto,150px}
