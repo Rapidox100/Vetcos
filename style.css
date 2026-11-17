@@ -940,3 +940,11 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .wa__side li.wc{position:relative;z-index:2}
 @media(max-width:1020px){.phone{box-shadow:0 14px 30px rgba(7,24,32,.22),inset 0 0 0 2px #2b343c}}
 @media(max-width:560px){.wa__stage{align-items:stretch}}
+
+/* MOBILE ONLY: role cards - floating chips stay on the photo, never over the text */
+@media(max-width:620px){
+  .role .float,.role--par .float{top:14px;bottom:auto;left:14px}
+  .role>img,.role--par>img{height:260px;min-height:0}
+  .role__t{padding:22px 20px}
+  .role__t h3{font-size:1.45rem}
+}
