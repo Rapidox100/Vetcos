@@ -669,3 +669,5 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 .kick::before{background-size:23px,auto}
 .kick--l::before{background-size:23px,auto}
 @media(max-width:560px){.kick::before,.kick--l::before{background-size:19px,auto}}
+.kick::before{margin-top:0;top:-1px}
+.kick::before,.kick--l::before{background-position:calc(50% + .5px) calc(50% + 1.5px),center}
