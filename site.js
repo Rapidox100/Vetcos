@@ -78,7 +78,10 @@
   function splitHeading(el) {
     var total = el.textContent.replace(/\s+/g, '').length;
     var step = Math.min(38, 1100 / Math.max(total, 1)), n = 0;
-    el.setAttribute('aria-label', el.textContent.replace(/\s+/g, ' ').trim());
+    var lc = el.cloneNode(true);
+    Array.prototype.slice.call(lc.querySelectorAll('img')).forEach(function (im) { im.replaceWith(document.createTextNode(' ' + im.alt + ' ')); });
+    Array.prototype.slice.call(lc.querySelectorAll('br')).forEach(function (br) { br.replaceWith(document.createTextNode(' ')); });
+    el.setAttribute('aria-label', lc.textContent.replace(/\s+/g, ' ').trim());
     (function walk(node) {
       Array.prototype.slice.call(node.childNodes).forEach(function (c) {
         if (c.nodeType === 3) {
@@ -94,6 +97,8 @@
             frag.appendChild(w);
           });
           node.replaceChild(frag, c);
+        } else if (c.nodeType === 1 && c.tagName === 'IMG') {
+          c.classList.add('ch'); c.style.setProperty('--d', Math.round(n++ * step) + 'ms');
         } else if (c.nodeType === 1 && c.tagName !== 'BR') walk(c);
       });
     })(el);

@@ -608,3 +608,12 @@ blockquote{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3vw,2
 .why__list li.is-on .why__more p{color:#d9f1f1}
 .why__list li.is-on .chips li{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22)}
 @media(max-width:560px){.why__list button{gap:14px;padding:16px 56px 16px 14px}.why__list .n{width:42px;height:42px}.why__list button::after{right:14px;width:30px;height:30px;margin-top:-15px}.why__more{padding:0 16px}}
+
+
+/* VETCOS WORDMARK used in place of the word "Vetcos" */
+.vw{display:inline-block;height:1.08em;width:auto;vertical-align:-.2em;margin:0 .05em;text-transform:none;letter-spacing:0;font-style:normal}
+.npill .vw,.kick .vw{height:1.25em;vertical-align:-.28em}
+.sec.dark .vw,.foot .vw,.pet .vw{filter:drop-shadow(0 0 1.5px rgba(255,255,255,.95)) drop-shadow(0 0 1px rgba(255,255,255,.8))}
+.split .vw.ch{display:inline-block}
+.phone__h .vw{height:1.2em}
+.badge .vw{height:1.1em}
