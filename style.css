@@ -935,3 +935,8 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .hero__stats{margin-top:6px}
 }
 @media(max-width:760px){.clinic__hint{margin-top:-30px;position:relative}}
+
+/* shadow of the phone must never sit on top of the cards */
+.wa__side li.wc{position:relative;z-index:2}
+@media(max-width:1020px){.phone{box-shadow:0 14px 30px rgba(7,24,32,.22),inset 0 0 0 2px #2b343c}}
+@media(max-width:560px){.wa__stage{align-items:stretch}}
