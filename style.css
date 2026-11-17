@@ -418,7 +418,7 @@ body{background:var(--cream)}
 .hero{background:var(--cream);color:var(--ink);
   background-image:radial-gradient(760px 560px at 88% 12%,rgba(0,179,181,.22),transparent 70%),
                    radial-gradient(520px 420px at 0% 100%,rgba(248,104,0,.13),transparent 70%),var(--paw-t);
-  background-size:auto,auto,150px}
+  background-size:auto,auto,320px}
 .hero h1>span:last-child{color:var(--teal)}
 .hero__sub{color:var(--ink)}
 .hero__vals{color:var(--gray)}
@@ -437,15 +437,15 @@ body{background:var(--cream)}
 .marquee span::after{color:var(--peach)}
 
 /* DARK SECTIONS -> deep Vetcos teal with paw texture */
-.sec.dark{background-color:var(--deep);background-image:var(--paw-w);background-size:150px}
-.owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(0,179,181,.35),transparent 70%),var(--paw-w);background-size:auto,150px}
-.demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.2),transparent 70%),var(--paw-w);background-size:auto,150px}
+.sec.dark{background-color:var(--deep);background-image:var(--paw-w);background-size:320px}
+.owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(0,179,181,.35),transparent 70%),var(--paw-w);background-size:auto,320px}
+.demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.2),transparent 70%),var(--paw-w);background-size:auto,320px}
 .dark em{color:#7ff0e9}
 .kick--l{color:#7ff0e9}
 .lede,.sec.dark .sec__h p:not(.kick),.sys p,.contact{color:#cfe9ea}
 .sys article{border-color:rgba(255,255,255,.16)}
 .rail li{border-color:rgba(255,255,255,.16)}
-.foot{background:#043a40;background-image:var(--paw-w);background-size:150px}
+.foot{background:#043a40;background-image:var(--paw-w);background-size:320px}
 .pet{background:var(--ink2)}
 
 /* LIGHT SECTIONS: cream / mint / peach rhythm */
@@ -635,3 +635,10 @@ h1 .vw,h2 .vw{height:1.02em;margin:0 .06em 0 .14em;vertical-align:-.015em}
 /* FOOTER: big full-colour wordmark instead of the faint outline */
 .foot__wm{display:block;width:min(720px,84%);height:auto;margin:56px auto 8px;opacity:1;filter:brightness(1.12) saturate(1.1)}
 @media(max-width:560px){.foot__wm{width:88%;margin:40px auto 4px}}
+
+
+/* LOGO PATTERN: the Vetcos emblem replaces the paw prints (backgrounds + badge icon) */
+:root{--paw-t:url("assets/emblem-tile-light.png");--paw-w:url("assets/emblem-tile-dark.png");--paw-o:url("assets/emblem.png")}
+.kick::before{width:28px;height:28px;background:var(--paw-o) center/19px no-repeat,#fff;box-shadow:inset 0 0 0 1px rgba(0,179,181,.25)}
+.kick--l::before{background:var(--paw-o) center/19px no-repeat,#fff;box-shadow:none}
+@media(max-width:560px){.kick::before{width:24px;height:24px;background-size:16px,auto}}
