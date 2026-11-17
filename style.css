@@ -953,33 +953,6 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .teams{background:linear-gradient(165deg,#f4fbf9 0%,#dff4f1 55%,#c9ece8 100%)}
 .story{background:linear-gradient(165deg,#fff6ea 0%,#ffe9d2 55%,#ffd9b5 100%)}
 
-/* RICHER BACKGROUNDS: layered mesh gradients + dotted texture */
-.teams{background:
-  radial-gradient(rgba(0,127,131,.16) 1.3px,transparent 1.6px) 0 0/24px 24px,
-  radial-gradient(760px 520px at 6% 8%,rgba(0,179,181,.42),transparent 70%),
-  radial-gradient(680px 520px at 96% 28%,rgba(127,240,233,.55),transparent 70%),
-  radial-gradient(640px 480px at 62% 104%,rgba(255,255,255,.85),transparent 70%),
-  radial-gradient(520px 420px at 0% 100%,rgba(248,104,0,.16),transparent 70%),
-  linear-gradient(160deg,#e6f9f6 0%,#c4ebe7 100%)}
-.story{background:
-  radial-gradient(rgba(220,100,10,.17) 1.3px,transparent 1.6px) 0 0/24px 24px,
-  radial-gradient(760px 520px at 100% 4%,rgba(248,104,0,.34),transparent 70%),
-  radial-gradient(680px 540px at 0% 92%,rgba(255,168,84,.45),transparent 70%),
-  radial-gradient(600px 460px at 48% 36%,rgba(255,255,255,.75),transparent 70%),
-  radial-gradient(520px 420px at 100% 100%,rgba(0,179,181,.14),transparent 70%),
-  linear-gradient(160deg,#fff4e5 0%,#ffd9b3 100%)}
-@media(max-width:560px){
-  .teams,.story{background-size:20px 20px,auto,auto,auto,auto,auto}
-  .teams{background:
-    radial-gradient(rgba(0,127,131,.16) 1.3px,transparent 1.6px) 0 0/20px 20px,
-    radial-gradient(420px 360px at 0% 4%,rgba(0,179,181,.42),transparent 70%),
-    radial-gradient(400px 360px at 100% 40%,rgba(127,240,233,.55),transparent 70%),
-    radial-gradient(420px 340px at 50% 100%,rgba(255,255,255,.85),transparent 70%),
-    linear-gradient(160deg,#e6f9f6 0%,#c4ebe7 100%)}
-  .story{background:
-    radial-gradient(rgba(220,100,10,.17) 1.3px,transparent 1.6px) 0 0/20px 20px,
-    radial-gradient(420px 360px at 100% 2%,rgba(248,104,0,.34),transparent 70%),
-    radial-gradient(420px 380px at 0% 96%,rgba(255,168,84,.45),transparent 70%),
-    radial-gradient(380px 320px at 50% 40%,rgba(255,255,255,.7),transparent 70%),
-    linear-gradient(160deg,#fff4e5 0%,#ffd9b3 100%)}
-}
+/* BOLDER CLEAN GRADIENTS (no mesh, no texture) */
+.teams{background:linear-gradient(135deg,#e9faf7 0%,#a9e4de 55%,#5fcfc8 100%)}
+.story{background:linear-gradient(135deg,#fff5e8 0%,#ffcf9f 55%,#ff9f57 100%)}
