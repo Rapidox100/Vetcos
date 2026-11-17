@@ -768,3 +768,7 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .wa__side .wc--lilac{background:#efe9fb}.wa__side .wc--mint{background:#e3f6ef}.wa__side .wc--peach{background:#fdeedd}
 .wa__side .wc--sky{background:#eaf4fc}.wa__side .wc--pink{background:#fdecf1}.wa__side .wc--white-b{background:#eaf0ff}
 .wa__side .wc b::after{content:none}
+
+/* footer: no background logos */
+.foot::before{display:none!important;background-image:none!important}
+.foot{background-image:none!important}
