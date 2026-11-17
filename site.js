@@ -126,21 +126,6 @@
     });
   });
 
-  // Locked desktop layout on phones for four sections: scale them to fit (nothing collapses)
-  (function () {
-    var DESIGN = 980, ids = ['why', 'india', 'flow', 'whatsapp'];
-    function fitSections() {
-      var w = document.documentElement.clientWidth, root = document.documentElement;
-      var lock = w <= 1100;
-      root.classList.toggle('fixed-desktop', lock);
-      ids.forEach(function (id) {
-        var s = document.getElementById(id); if (!s) return;
-        s.style.zoom = (lock && w < DESIGN) ? (w / DESIGN) : '';
-      });
-    }
-    fitSections(); window.addEventListener('resize', fitSections);
-  })();
-
   // Dashboard: on small screens scale the full desktop layout to fit (nothing collapses)
   (function () {
     var app = $('.owner .app'); if (!app) return;
