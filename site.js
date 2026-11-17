@@ -119,7 +119,12 @@
     items.forEach(function (li, j) { li.classList.toggle('is-on', i === j); });
     shots.forEach(function (im, j) { im.classList.toggle('on', i === j); });
   }
-  items.forEach(function (li, i) { $('button', li).addEventListener('click', function () { pick(i); }); });
+  items.forEach(function (li, i) {
+    $('button', li).addEventListener('click', function () {
+      // tapping the open card (the minus) closes it; tapping another opens that one
+      if (li.classList.contains('is-on')) li.classList.remove('is-on'); else pick(i);
+    });
+  });
 
   // Clinic: colour is revealed under the mouse (sketch -> colour), smooth follow
   (function () {
