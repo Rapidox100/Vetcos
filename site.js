@@ -116,18 +116,22 @@
   }
   items.forEach(function (li, i) { $('button', li).addEventListener('click', function () { pick(i); }); });
 
-  // Clinic hotspots
-  var fig = $('#clinicFig'), pop = $('#pop'), popT = $('#popT'), pts = $$('#pts button');
-  pts.forEach(function (b) {
-    b.addEventListener('click', function () {
-      pts.forEach(function (x) { x.classList.remove('on'); });
-      b.classList.add('on'); fig.classList.add('on');
-      popT.textContent = b.textContent; pop.hidden = false;
+  // Clinic hotspots: tap a dot to see the part of care + Book a demo
+  var fig = $('#clinicFig'), pop = $('#pop'), popT = $('#popT'), hs = $$('.hs', fig);
+  function closePop() { pop.hidden = true; hs.forEach(function (x) { x.classList.remove('on'); }); }
+  hs.forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      hs.forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on'); popT.innerHTML = b.dataset.n;
+      var px = Math.min(Math.max(+b.style.getPropertyValue('--x'), 14), 86);
+      pop.style.setProperty('--px', px); pop.style.setProperty('--py', b.style.getPropertyValue('--y'));
+      pop.hidden = false;
     });
   });
-  $('.pop__x').addEventListener('click', function () {
-    pop.hidden = true; fig.classList.remove('on'); pts.forEach(function (x) { x.classList.remove('on'); });
-  });
+  $('.pop__x', pop).addEventListener('click', closePop);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePop(); });
+  document.addEventListener('click', function (e) { if (!pop.hidden && !pop.contains(e.target)) closePop(); });
 
   // Workflow rail
   var rail = $('#rail'), bar = $('#bar');
@@ -152,7 +156,7 @@
   auto();
 
   // Scroll reveal (also triggers chart animations)
-  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.pts,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo__card,.intel').forEach(function (el) { el.classList.add('rv'); });
+  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo__card,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
     en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
   }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });

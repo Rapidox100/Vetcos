@@ -469,3 +469,23 @@ body{background:var(--cream)}
 
 /* soft paw divider under the hero marquee & before footer */
 .demo__card,.form{box-shadow:0 30px 80px rgba(2,40,45,.4)}
+
+
+/* CLINIC HOTSPOTS (pulsing dots on the colour illustration) */
+.clinic__fig{position:relative;max-width:1180px;margin:0 auto;border:0;border-radius:0;overflow:visible;background:none}
+.clinic__fig>img{width:100%;border-radius:28px}
+.hs{position:absolute;left:calc(var(--x)*1%);top:calc(var(--y)*1%);width:0;height:0;z-index:2}
+.hs i{position:absolute;left:-17px;top:-17px;width:34px;height:34px;border-radius:50%;background:var(--teal);box-shadow:0 6px 18px rgba(6,74,80,.35);display:grid;place-items:center;transition:transform .25s}
+.hs i::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--orange)}
+.hs i::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--teal);opacity:0;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.7);opacity:.8}100%{transform:scale(1.7);opacity:0}}
+.hs__l{position:absolute;top:0;transform:translateY(-50%);background:#fff;color:var(--ink);font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 22px rgba(6,74,80,.16);transition:.2s}
+.hs--r .hs__l{left:24px}.hs--l .hs__l{right:24px}
+.hs:hover i,.hs.on i{transform:scale(1.15)}
+.hs:hover .hs__l,.hs.on .hs__l{background:var(--deep);color:#fff}
+.pop{position:absolute;left:calc(var(--px,50)*1%);top:calc(var(--py,50)*1%);transform:translate(-50%,calc(-100% - 28px));margin:0;z-index:5;width:max-content;min-width:200px;max-width:calc(100% - 20px);background:#fff;color:var(--ink);border-radius:20px;padding:18px 22px;text-align:left;display:grid;gap:12px;justify-items:start;box-shadow:0 24px 60px rgba(6,74,80,.3);animation:pin .3s ease}
+.pop[hidden]{display:none}
+.pop b{font-family:var(--serif);font-weight:400;font-size:1.8rem;line-height:1;padding-right:30px}
+.pop .btn{padding:10px 20px;font-size:.9rem}
+.pop__x{position:absolute;top:8px;right:12px;font-size:1.5rem;color:var(--gray)}
+@media(max-width:760px){.hs__l{display:none}.hs i{left:-12px;top:-12px;width:24px;height:24px}.hs i::before{width:10px;height:10px}}
