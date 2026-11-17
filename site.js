@@ -44,7 +44,7 @@
     });
     var logo = $('#pnavLogo'), img = $('img', logo);
     logo.addEventListener('mouseenter', function () {
-      gsap.to(img, { rotate: 360, duration: .8, ease: 'elastic.out(1, 0.5)', overwrite: 'auto', onComplete: function () { gsap.set(img, { rotate: 0 }); } });
+      gsap.fromTo(img, { scale: 1 }, { scale: 1.1, duration: .25, yoyo: true, repeat: 1, ease: 'power2.out', overwrite: 'auto' });
     });
     // entrance
     gsap.from(logo, { scale: 0, opacity: 0, duration: .8, ease: 'back.out(1.7)' });

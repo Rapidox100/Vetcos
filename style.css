@@ -518,3 +518,12 @@ body{background:var(--cream)}
 .cpop__card.tone-rose .cpop__ico{background:#fdf0f6;color:#c43d78}
 .cpop__card.tone-orange .cpop__ico{background:#fff4eb;color:#e36a12}
 .cpop__card.tone-sky .cpop__ico{background:#eef9fd;color:#0b8eaa}
+
+
+/* FULL LOGO in the nav: white pill with the complete Vetcos logo */
+.pnav__logo{width:auto;height:var(--nav-h);padding:0 20px 0 16px;border-radius:999px;background:#fff;border:1.5px solid var(--teal-l);box-shadow:0 8px 24px rgba(6,74,80,.22)}
+.pnav__logo img{width:auto;height:34px;object-fit:contain}
+@media(max-width:520px){.pnav__logo{padding:0 14px 0 12px}.pnav__logo img{height:32px}}
+.pnav__logo{height:58px;padding:0 22px 0 18px}
+.pnav__logo img{height:46px}
+@media(max-width:520px){.pnav__logo{height:52px;padding:0 16px 0 14px}.pnav__logo img{height:40px}}
