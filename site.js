@@ -126,6 +126,18 @@
     });
   });
 
+  // Dashboard: on small screens scale the full desktop layout to fit (nothing collapses)
+  (function () {
+    var app = $('.owner .app'); if (!app) return;
+    function fit() {
+      var host = app.parentElement, cs = getComputedStyle(host);
+      var avail = host.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      if (window.innerWidth > 1020) { app.style.zoom = ''; return; }
+      app.style.zoom = Math.min(1, (avail - 8) / 880);
+    }
+    fit(); window.addEventListener('resize', fit);
+  })();
+
   // Clinic: colour is revealed under the mouse (sketch -> colour), smooth follow
   (function () {
     var fg = $('#clinicFig'); if (!fg) return;
