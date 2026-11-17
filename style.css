@@ -921,3 +921,17 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .clinic__hint{display:block;text-align:center;color:var(--gray);font-size:.85rem;margin-top:14px}
   .clinic{padding-left:20px;padding-right:20px}
 }
+
+/* MOBILE ONLY: tighter vertical spacing between sections */
+@media(max-width:560px){
+  .sec{padding-top:44px;padding-bottom:44px}
+  .clinic{padding-top:40px;padding-bottom:40px}
+  .sec__h{margin-bottom:26px}
+  .kick{margin-bottom:14px}
+  .sec__h p:not(.kick){margin-top:12px}
+  .chips--c{margin-top:16px}
+  .wa__tag{margin-top:30px}
+  .foot{padding-top:48px}
+  .hero__stats{margin-top:6px}
+}
+@media(max-width:760px){.clinic__hint{margin-top:-30px;position:relative}}
