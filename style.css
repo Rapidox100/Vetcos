@@ -1391,3 +1391,6 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .hs-pets{left:0;bottom:30%;width:clamp(140px,12vw,260px)}
   .hs-paw{left:11vw;top:23%}
 }
+@media(min-width:1021px){
+  .hs-pets{left:-1vw;bottom:26%;width:clamp(210px,18vw,400px)}
+}
