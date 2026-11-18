@@ -1354,3 +1354,7 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 @media(max-width:1020px){.hero__scene{width:100%;-webkit-mask-image:none;mask-image:none;opacity:.85}.hs-pets{left:auto;right:6%;bottom:24%;width:150px}.hs-paw{left:auto;right:12%;top:16%}}
 .hs-pets{left:55%;bottom:23%;width:min(250px,17vw)}
 @media(max-width:1020px){.hs-pets{left:auto}}
+.hs-pets{left:52%;bottom:22%;width:min(290px,20vw)}
+@media(max-width:1020px){.hs-pets{left:auto}}
+.hs-pets{left:54%;bottom:19%;width:min(250px,16vw)}
+@media(max-width:1020px){.hs-pets{left:auto}}
