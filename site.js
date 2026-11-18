@@ -203,7 +203,7 @@
   auto();
 
   // Scroll reveal (also triggers chart animations)
-  $$('.sec__h,.why__grid,.app,.owner__copy,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo>.form,.intel').forEach(function (el) { el.classList.add('rv'); });
+  $$('.sec__h,.why__grid,.owner__shot,.owner__copy,.owner__shot,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo>.form,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
     en.forEach(function (e) { e.target.classList.toggle('in-view', e.isIntersecting); });
   }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
