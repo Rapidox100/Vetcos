@@ -1325,3 +1325,22 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .wv-li small,.wv-sub2{color:#d6f2f2}
 .wv-hi,.wv-line em{color:#ffe9c4}
 .wv-bub-img img{height:150px;object-position:50% 22%}
+
+/* WHY VETCOS: larger text in the tab list and detail panel */
+.why-tab{padding:1rem 1.2rem;gap:1.1rem}
+.why-tab-num{font-size:1rem}
+.why-tab-copy{gap:.25rem}
+.why-tab-copy strong{font-size:1.3rem;line-height:1.25}
+.why-tab-copy small{font-size:1rem}
+.why-detail{padding:1.6rem 1.7rem 1.7rem}
+.why-detail-lead{font-size:1.2rem;line-height:1.5;margin-bottom:1.2rem}
+.why-detail ul{gap:.8rem 1rem;margin-bottom:1.5rem}
+.why-detail li{font-size:1.1rem;padding-left:1.2rem}
+.why-detail li::before{width:8px;height:8px;top:.5em}
+.why-cta{font-size:1.1rem;padding:1rem 1.4rem}
+@media(max-width:560px){
+  .why-tab-copy strong{font-size:1.1rem}
+  .why-tab-num{font-size:.9rem}
+  .why-detail-lead{font-size:1.05rem}
+  .why-detail li{font-size:1rem}
+}
