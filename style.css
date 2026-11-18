@@ -1067,3 +1067,15 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .sys article{border-color:#2c5468}
 .rail li{border-color:#e3e9e8}
 .btn--line:hover{background:#fff}
+
+/* =====  FLAT: no blurred logo backdrops, no glow gradients, solid navy cards  ===== */
+.hero::before,.sec.dark::before,.foot::before{display:none!important;background:none!important;-webkit-mask-image:none;mask-image:none}
+.hero{background:var(--cream)!important;background-image:none!important}
+.sec.dark,.owner,.demo,.foot{background-image:none!important}
+.sec.dark{background-color:#0b2430}
+.foot{background-color:#071820}
+.why__list li.is-on{background:#0b2430;border-color:#0b2430;box-shadow:0 6px 18px rgba(11,36,48,.18)}
+.why__list li.is-on .chips li{background:#17384a;border:1px solid #2c5468;color:#fff}
+.why__list li.is-on button::after{background-color:#17384a}
+.why__list .n,.why__list li.is-on .n{box-shadow:none}
+.hero__r::before{display:none}
