@@ -1433,3 +1433,9 @@ html{scroll-padding-top:90px}
 .pnav__items .npill .vw{height:1.2em}
 .pnav__menu a{font-size:1.05rem}
 @media(min-width:1021px) and (max-width:1250px){.pnav__items .npill{font-size:.88rem;padding:10px 11px}}
+
+/* HERO: what Vetcos stands for */
+.hero__full{display:flex;flex-wrap:wrap;gap:.1em .45em;font-family:var(--serif);font-weight:600;font-size:clamp(1.15rem,1.9vw,1.7rem);letter-spacing:-.01em;line-height:1.2;color:var(--ink);margin:0 0 22px}
+.hero__full b{font-weight:800;font-size:1.22em;line-height:1}
+.hf-t{color:var(--teal)}.hf-o{color:var(--orange)}
+@media(max-width:560px){.hero__full{font-size:1.1rem;margin-bottom:14px;gap:.1em .4em}}
