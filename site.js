@@ -81,7 +81,7 @@
     var lc = el.cloneNode(true);
     Array.prototype.slice.call(lc.querySelectorAll('img')).forEach(function (im) { im.replaceWith(document.createTextNode(' ' + im.alt + ' ')); });
     Array.prototype.slice.call(lc.querySelectorAll('br')).forEach(function (br) { br.replaceWith(document.createTextNode(' ')); });
-    el.setAttribute('aria-label', lc.textContent.replace(/\s+/g, ' ').trim());
+    el.setAttribute('aria-label', el.getAttribute('data-label') || lc.textContent.replace(/\s+/g, ' ').trim());
     (function walk(node) {
       Array.prototype.slice.call(node.childNodes).forEach(function (c) {
         if (c.nodeType === 3) {
