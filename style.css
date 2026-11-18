@@ -974,3 +974,10 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .role .float{top:14px;left:14px;bottom:auto}
   .role--par .float{top:14px;bottom:auto}
 }
+
+/* DESKTOP: scale everything down ~15% so sections fit on one screen */
+@media(min-width:1021px){
+  html{zoom:.85}
+  :root{--pad:max(20px,calc((100% - 1500px)/2))}
+}
+@media(min-width:1021px){.pnav__bar{width:min(1500px,100% - 28px)}}
