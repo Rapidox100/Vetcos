@@ -52,23 +52,21 @@
   <div class="hero__scene" aria-hidden="true">
     <svg class="hs-hills" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="hsOr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd5a8"/><stop offset="1" stop-color="#ffb26a"/></linearGradient>
-        <linearGradient id="hsTl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9f0ee"/><stop offset="1" stop-color="#b9e2de"/></linearGradient>
+        <linearGradient id="hsDome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2c4" stop-opacity=".95"/><stop offset="1" stop-color="#ffeedd" stop-opacity="0"/></linearGradient>
+        <linearGradient id="hsMid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3f0ee"/><stop offset="1" stop-color="#f4f4ee"/></linearGradient>
+        <linearGradient id="hsOr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf9a"/><stop offset=".55" stop-color="#ffb468"/><stop offset="1" stop-color="#ff9f45"/></linearGradient>
+        <linearGradient id="hsOr2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".6" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <filter id="hsBlur"><feGaussianBlur stdDeviation=".35"/></filter>
       </defs>
-      <ellipse cx="10" cy="30" rx="38" ry="17" fill="#ffe3c7" opacity=".6"/>
-      <path d="M0 56C14 46 34 50 54 62C70 71 86 73 100 72L100 100L0 100Z" fill="url(#hsTl)" opacity=".7"/>
-      <path d="M0 68C20 63 42 71 62 80C78 87 90 87 100 86L100 100L0 100Z" fill="#fffaf3" opacity=".95"/>
-      <path d="M0 82C14 76 30 78 44 86C58 94 78 95 100 92L100 100L0 100Z" fill="url(#hsOr)" opacity=".85"/>
+      <path d="M0 33C6 26 20 24 32 29C40 33 46 40 48 48L0 70Z" fill="url(#hsDome)"/>
+      <path d="M0 60C12 59 28 63 46 73C66 84 84 86 100 85L100 100L0 100Z" fill="url(#hsMid)"/>
+      <path d="M0 60C12 59 28 63 46 73C66 84 84 86 100 85" fill="none" stroke="#fff" stroke-width=".5" opacity=".9"/>
+      <path d="M52 86C68 80 86 79 100 81L100 100L52 100Z" fill="#edf2ee" opacity=".9"/>
+      <path d="M0 76C12 74 26 78 40 86C56 95 78 98 100 96L100 100L0 100Z" fill="url(#hsOr)" filter="url(#hsBlur)"/>
+      <path d="M0 88C16 86 34 92 52 97C68 101 86 100 100 99L100 100L0 100Z" fill="url(#hsOr2)"/>
     </svg>
-    <svg class="hs-pets" viewBox="0 0 330 270" xmlns="http://www.w3.org/2000/svg">
-      <g fill="#a9cfce">
-        <path d="M168 66C168 58 162 53 154 53L136 51C132 36 120 27 106 27C92 27 82 38 82 52C74 60 70 80 76 96C80 104 92 100 94 88C92 106 82 126 74 154C64 184 58 206 58 226C56 240 60 250 70 254L168 254C174 254 177 246 170 243L152 240L150 184C152 164 148 142 140 124C136 112 136 102 142 94C150 88 160 80 166 74C168 71 168 68 168 66Z"/>
-        <path d="M60 238C40 238 30 224 34 208" fill="none" stroke="#a9cfce" stroke-width="9" stroke-linecap="round"/>
-        <path d="M258 60C246 60 240 50 240 38L242 12L256 25C261 24 266 24 270 25L284 12L286 38C286 50 280 60 268 62C276 74 280 96 280 122L282 168C286 172 288 178 282 182L212 182C200 182 200 168 206 160C198 140 200 112 214 92C222 80 232 70 246 64Z"/>
-        <path d="M280 178C306 182 314 158 296 148" fill="none" stroke="#a9cfce" stroke-width="8" stroke-linecap="round"/>
-      </g>
-    </svg>
-    <svg class="hs-paw" viewBox="0 0 46 42" xmlns="http://www.w3.org/2000/svg"><g fill="#9fd6d3" transform="rotate(-14 23 21)"><ellipse cx="23" cy="30" rx="12" ry="10"/><ellipse cx="7" cy="16" rx="5" ry="7"/><ellipse cx="18" cy="8" rx="5" ry="7"/><ellipse cx="29" cy="8" rx="5" ry="7"/><ellipse cx="40" cy="16" rx="5" ry="7"/></g></svg>
+    <img class="hs-pets" src="assets/hero-pets.png" alt="" width="684" height="562">
+    <svg class="hs-paw" viewBox="0 0 46 42" xmlns="http://www.w3.org/2000/svg"><g fill="#bcd6d4" opacity=".85" transform="rotate(-14 23 21)"><ellipse cx="23" cy="30" rx="12" ry="10"/><ellipse cx="7" cy="16" rx="5" ry="7"/><ellipse cx="18" cy="8" rx="5" ry="7"/><ellipse cx="29" cy="8" rx="5" ry="7"/><ellipse cx="40" cy="16" rx="5" ry="7"/></g></svg>
   </div>
   <div class="hero__l">
     <h1><span>THE FUTURE</span><i>of</i><span>VET CARE</span></h1>
