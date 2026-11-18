@@ -1366,3 +1366,8 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 @media(max-width:1020px){.hs-pets{left:auto;right:4%;bottom:30%;width:150px}.hs-paw{left:auto;right:10%;top:18%}}
 .hs-pets{position:absolute;left:55%;bottom:20%;width:min(330px,22vw);height:auto;opacity:.55}
 @media(max-width:1020px){.hs-pets{left:auto;right:4%;bottom:30%;width:170px}}
+.hs-pets{position:absolute;left:51%;bottom:19%;width:min(380px,25vw);height:auto;max-width:none;opacity:.55;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 74%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 74%,transparent 100%)}
+@media(max-width:1020px){.hs-pets{left:auto;right:2%;bottom:30%;width:190px}}
+.hs-pets{left:55%;bottom:17%;width:min(320px,21vw)}
+@media(max-width:1020px){.hs-pets{left:auto;width:190px}}
