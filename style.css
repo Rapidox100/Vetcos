@@ -1046,3 +1046,8 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .platform .sys .sys--w:last-child{display:grid;grid-template-columns:auto 1fr;column-gap:20px;align-items:center}
 .platform .sys .sys--w:last-child h3{margin:0 0 6px}
 @media(max-width:560px){.platform .sys .sys--w:last-child{column-gap:12px}}
+
+/* PLATFORM: plain solid white cards (no glass / gradient feel) */
+.platform .sys article,.platform .sys .sys--w,.platform .sys .sys--w:last-child{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;border:1px solid #e3e9e8;box-shadow:0 2px 8px rgba(11,36,48,.06)}
+.platform .sys article:hover{box-shadow:0 8px 20px rgba(11,36,48,.10)}
+.platform{background:#f5f8f7}
