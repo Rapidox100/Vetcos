@@ -1295,3 +1295,19 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .wv-bub-img img{height:110px}
 .wv-upc .wv-line{padding:4px 8px;margin-bottom:3px}
 .wv-upc h5{margin-bottom:6px}
+
+/* logo wordmark in the sidebars; WhatsApp-style phones */
+.wv-brand{display:block;margin:2px 0 18px 8px}
+.wv-brand img{height:26px;width:auto;display:block;filter:brightness(0) invert(1)}
+.wv-phone{background:#1b2229;box-shadow:0 12px 30px rgba(11,36,48,.22),inset 0 0 0 2px #2b343c}
+.wv-ph-top.wv-wa{background:#0f7f67;gap:8px;padding:16px 12px 11px;border-radius:26px 26px 0 0;align-items:center}
+.wv-back{font-size:1.3rem;line-height:1;color:#fff;margin-right:-2px}
+.wv-dp{width:32px;height:32px;border-radius:50%;object-fit:cover;background:#fff;flex:none;border:2px solid #fff}
+.wv-wa b{display:flex;align-items:center;gap:4px;font-size:.78rem;white-space:nowrap}
+.wv-wa>div{flex:1;min-width:0;line-height:1.2}
+.wv-ico{display:flex;gap:9px;align-items:center}
+.wv-ph-body{background:#e9e3da}
+.wv-ph-foot{background:#e9e3da}
+.wv-ph-foot i{display:grid;place-items:center}
+.wv-brand{background:#fff;border-radius:12px;padding:7px 12px;margin:0 2px 16px;display:inline-block}
+.wv-brand img{filter:none;height:22px}
