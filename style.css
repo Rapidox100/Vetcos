@@ -1200,3 +1200,10 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .why-cta{width:100%}
 @media(max-width:991px){.why-stage{grid-template-columns:1fr}.why-visual{min-height:0;aspect-ratio:4/3}}
 @media(max-width:560px){.why-tab{padding:.75rem .85rem}.why-tab-copy small{display:none}.why-detail{padding:1.15rem 1.1rem 1.2rem;border-radius:18px}.why-detail ul{grid-template-columns:1fr}}
+
+/* HERO: soft coloured logo backdrop restored (hero only) */
+.hero{background-color:var(--cream)!important;background-image:radial-gradient(760px 560px at 88% 12%,rgba(0,179,181,.22),transparent 70%),radial-gradient(520px 420px at 0% 100%,rgba(248,104,0,.13),transparent 70%)!important}
+.hero::before{display:block!important;content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:url("assets/emblem-tile-light.png")!important;background-size:480px 480px;background-repeat:repeat;
+  -webkit-mask-image:radial-gradient(ellipse 65% 70% at 88% 18%,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%),radial-gradient(ellipse 55% 60% at 6% 92%,#000 0%,rgba(0,0,0,.5) 40%,transparent 100%)!important;
+          mask-image:radial-gradient(ellipse 65% 70% at 88% 18%,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%),radial-gradient(ellipse 55% 60% at 6% 92%,#000 0%,rgba(0,0,0,.5) 40%,transparent 100%)!important}
+.hero{position:relative;isolation:isolate}
