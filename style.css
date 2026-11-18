@@ -1454,3 +1454,7 @@ html{scroll-padding-top:90px}
 .hero h1 .hw{display:inline-block;white-space:nowrap}
 #why .sec__h{max-width:1000px}
 #why .sec__h h2{text-wrap:balance}
+/* headline colours: "Veterinary" all teal, "Clinical Operating System" all orange */
+.hero h1 .hw{color:var(--orange)}
+.hero h1 .hl:first-child .hw:first-child{color:var(--teal)}
+.hero h1 .hv-o{color:inherit}
