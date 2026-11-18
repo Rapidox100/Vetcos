@@ -1051,3 +1051,19 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .platform .sys article,.platform .sys .sys--w,.platform .sys .sys--w:last-child{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;border:1px solid #e3e9e8;box-shadow:0 2px 8px rgba(11,36,48,.06)}
 .platform .sys article:hover{box-shadow:0 8px 20px rgba(11,36,48,.10)}
 .platform{background:#f5f8f7}
+
+/* =====  NO GLASS ANYWHERE: solid fills, no blur, no see-through panels  ===== */
+.float{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+.modal::backdrop,.cpop{backdrop-filter:none;-webkit-backdrop-filter:none}
+.modal::backdrop{background:rgba(7,24,32,.78)}
+.cpop{background:rgba(7,24,32,.78)}
+.kick--l{background:#17384a;border-color:#2c5468;backdrop-filter:none}
+.chips--d li{background:#17384a;border-color:#2c5468;color:#e3f1f4}
+.pnav__items,.pnav__burger,.pnav__menu{background:#0b2430}
+.pnav__menu a:hover{background:#17384a}
+.why__list li.is-on .chips li{background:#1d4a62;border-color:#2c5f7a}
+.why__list li.is-on button::after{background-color:#2a5a73}
+.rail li::after{background:#2a5a73}
+.sys article{border-color:#2c5468}
+.rail li{border-color:#e3e9e8}
+.btn--line:hover{background:#fff}
