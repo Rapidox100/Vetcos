@@ -1396,3 +1396,5 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 }
 .hs-pets{opacity:1;z-index:2;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.6) 78%,transparent 96%);mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.6) 78%,transparent 96%)}
 .hs-paw{display:none}
+/* soft orange: fade the whole scene into the page background at its top and bottom edges */
+.hero__scene{-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 60%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 14%,#000 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,#000 0%,#000 60%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 14%,#000 100%);mask-composite:intersect}
