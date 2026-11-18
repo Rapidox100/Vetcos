@@ -1344,3 +1344,13 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .why-detail-lead{font-size:1.05rem}
   .why-detail li{font-size:1rem}
 }
+
+/* HERO: left-side scene (hills, dog + cat silhouettes, paw) */
+.hero__scene{position:absolute;left:0;top:0;bottom:0;width:64%;z-index:-1;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 70%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 70%,transparent 100%)}
+.hs-hills{position:absolute;inset:0;width:100%;height:100%}
+.hs-pets{position:absolute;left:36%;bottom:25%;width:min(300px,22vw);height:auto}
+.hs-paw{position:absolute;left:19%;top:9%;width:44px;height:auto}
+@media(max-width:1020px){.hero__scene{width:100%;-webkit-mask-image:none;mask-image:none;opacity:.85}.hs-pets{left:auto;right:6%;bottom:24%;width:150px}.hs-paw{left:auto;right:12%;top:16%}}
+.hs-pets{left:55%;bottom:23%;width:min(250px,17vw)}
+@media(max-width:1020px){.hs-pets{left:auto}}
