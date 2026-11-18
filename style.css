@@ -988,3 +988,24 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(0,179,181,.28),transparent 70%)}
 .demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.22),transparent 70%)}
 .dark em{color:#4fd6d0}
+
+/* =====  ONE CALM BACKGROUND RHYTHM  =====
+   cream / white sections, navy only for Owner, Platform, Demo (+ footer) */
+.why{background:#fff}
+.clinic{background:#fff}
+.wa{background:var(--cream)}
+.flow{background:#fff;color:var(--ink)}
+.teams{background:var(--cream)}
+.story{background:#fff}
+.india{background:var(--cream)}
+.story .secure{background:var(--cream)}
+.story .secure .chips li{background:#fff}
+/* connected care on a light background */
+.flow::before{display:none}
+.flow em{color:var(--teal)}
+.flow .sec__h p:not(.kick){color:var(--gray)}
+.rail li{box-shadow:0 8px 26px rgba(11,36,48,.10);border:1px solid var(--line)}
+.rail li img{background:var(--cream)}
+.flow .intel{border-top:1px solid var(--line)}
+.flow .intel>b{color:var(--ink)}
+.flow .chips li{background:var(--mint);color:var(--teal-d);border:0}
