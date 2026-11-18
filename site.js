@@ -115,7 +115,7 @@
 
   // Why Vetcos: tabs + detail panel (original layout)
   (function () {
-    var tabs = $$('#whyTabs .why-tab'), panes = $$('.why-pane'), imgs = $$('.why-visual-img');
+    var tabs = $$('#whyTabs .why-tab'), panes = $$('.why-pane'), imgs = $$('.wv-slide');
     function pick(i) {
       tabs.forEach(function (t, j) { t.classList.toggle('is-active', i === j); t.setAttribute('aria-selected', i === j); });
       panes.forEach(function (p, j) { p.classList.toggle('is-active', i === j); });
@@ -154,6 +154,17 @@
       if (cr < 1) { cx = tx; cy = ty; } go();
     });
     fg.addEventListener('pointerleave', function () { tr = 0; go(); });
+  })();
+
+  // Why visuals: scale the 660x500 canvases to fit their box
+  (function () {
+    var box = $('#whyVisual'); if (!box) return;
+    function fit() {
+      var s = Math.min(box.clientWidth / 660, box.clientHeight / 520);
+      box.style.setProperty('--s', s > 0 ? s : 1);
+    }
+    fit(); window.addEventListener('resize', fit);
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(box);
   })();
 
   // Clinic (phones): start the sideways-swipe picture centred
