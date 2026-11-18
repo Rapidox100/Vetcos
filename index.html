@@ -145,7 +145,114 @@
     <a href="#demo" class="btn btn--o btn--lg">View Demo</a>
   </div>
 
-  <figure class="owner__shot"><img src="assets/owner-dashboard.png" alt="Vetcos owner dashboard: revenue, collections, outstanding, revenue trend, revenue by service, top clients, and a patient card for Bobby" width="789" height="680"></figure>
+  <div class="insights-visual" aria-hidden="true">
+              <div class="dash-window">
+                <aside class="dash-side">
+                  <div class="dash-brand">
+                    <img src="assets/vetcos-logo-trim.png" alt="" class="dash-logo">
+                  </div>
+                  <nav>
+                    <span class="is-active">Dashboard</span>
+                    <span>Patients</span>
+                    <span>Appointments</span>
+                    <span>Inventory</span>
+                    <span>Billing</span>
+                    <span>Reports</span>
+                    <span>Settings</span>
+                  </nav>
+                </aside>
+                <div class="dash-main">
+                  <div class="dash-topbar">
+                    <div class="dash-search">Search patients, invoices…</div>
+                    <div class="dash-actions">
+                      <span class="dash-bell">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 16.5V10a6 6 0 1 1 12 0v6.5l1.5 2H4.5L6 16.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path><path d="M10 20a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+                        <i class="dash-bell-dot"></i>
+                      </span>
+                      <span class="dash-avatar">AK</span>
+                    </div>
+                  </div>
+                  <p class="dash-section-label">Practice overview</p>
+                  <div class="dash-kpis">
+                    <div class="dash-kpi"><small>Total Revenue</small><strong>₹ 3,48,620</strong><em class="up">+ 12%</em></div>
+                    <div class="dash-kpi"><small>Collections</small><strong>₹ 2,91,480</strong><em class="up">+ 10%</em></div>
+                    <div class="dash-kpi"><small>Outstanding</small><strong>₹ 57,140</strong><em class="down">− 5%</em></div>
+                  </div>
+                  <div class="dash-panels">
+                    <div class="dash-panel dash-trend">
+                      <div class="dash-panel-head"><span>Revenue Trend</span><small>Last 6 months</small></div>
+                      <svg viewBox="0 0 240 90" class="dash-chart" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="revFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#12b981" stop-opacity="0.28"></stop>
+                            <stop offset="100%" stop-color="#12b981" stop-opacity="0"></stop>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0 70 C30 66, 45 58, 70 52 C95 46, 110 40, 135 34 C160 28, 180 22, 210 14 L240 10 L240 90 L0 90 Z" fill="url(#revFill)"></path>
+                        <path d="M0 70 C30 66, 45 58, 70 52 C95 46, 110 40, 135 34 C160 28, 180 22, 210 14 L240 10" fill="none" stroke="#12b981" stroke-width="3" stroke-linecap="round"></path>
+                      </svg>
+                    </div>
+                    <div class="dash-panel dash-donut">
+                      <div class="dash-panel-head"><span>Consultations</span></div>
+                      <div class="donut-wrap">
+                        <svg viewBox="0 0 86 86" class="donut">
+                          <circle cx="43" cy="43" r="32" class="donut-track"></circle>
+                          <circle cx="43" cy="43" r="32" class="donut-value"></circle>
+                        </svg>
+                        <div class="donut-label"><strong>70%</strong><small>124 this month</small></div>
+                      </div>
+                    </div>
+                    <div class="dash-panel dash-services">
+                      <div class="dash-panel-head"><span>Revenue by Service</span></div>
+                      <div class="service-bars">
+                        <div class="service-bar"><span>Consultation</span><i style="width: 92%"></i></div>
+                        <div class="service-bar"><span>Vaccination</span><i style="width: 74%"></i></div>
+                        <div class="service-bar"><span>Surgery</span><i style="width: 58%"></i></div>
+                        <div class="service-bar"><span>Lab Tests</span><i style="width: 46%"></i></div>
+                        <div class="service-bar"><span>Others</span><i style="width: 32%"></i></div>
+                      </div>
+                    </div>
+                    <div class="dash-panel dash-clients">
+                      <div class="dash-panel-head"><span>Top Clients</span></div>
+                      <ul>
+                        <li><span class="client-dot tone-a">R</span><div><strong>Riya Sharma</strong><small>12 visits</small></div></li>
+                        <li><span class="client-dot tone-b">A</span><div><strong>Arjun Patel</strong><small>9 visits</small></div></li>
+                        <li><span class="client-dot tone-c">M</span><div><strong>Meera Iyer</strong><small>8 visits</small></div></li>
+                        <li><span class="client-dot tone-d">K</span><div><strong>Kabir Khan</strong><small>7 visits</small></div></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-mock">
+                <div class="phone-shell">
+                  <div class="phone-notch"></div>
+                  <div class="phone-screen">
+                    <div class="phone-top">
+                      <img src="assets/vetcos-logo-trim.png" alt="" class="phone-logo">
+                      <span class="phone-menu"></span>
+                    </div>
+                    <img src="assets/bobby-golden.png" alt="" class="phone-pet-img" width="280" height="280">
+                    <div class="phone-pet-meta">
+                      <h3>Bobby</h3>
+                      <p>Golden Retriever · 2.5 yrs · Male</p>
+                    </div>
+                    <div class="phone-tabs">
+                      <span class="is-active">Overview</span>
+                      <span>History</span>
+                      <span>Vaccines</span>
+                    </div>
+                    <div class="phone-visit">
+                      <small>Recent visit</small>
+                      <strong>12 Aug 2025 · Consultation</strong>
+                      <p>Dr. Meera</p>
+                    </div>
+                    <button type="button" class="phone-cta" tabindex="-1">View Full History</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 </section>
 
 <!-- CLINIC -->

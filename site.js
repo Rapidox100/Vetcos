@@ -128,12 +128,12 @@
 
   // Dashboard: on small screens scale the full desktop layout to fit (nothing collapses)
   (function () {
-    var app = $('.owner .app'); if (!app) return;
+    var app = $('.insights-visual'); if (!app) return;
     function fit() {
       var host = app.parentElement, cs = getComputedStyle(host);
       var avail = host.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
       if (window.innerWidth > 1020) { app.style.zoom = ''; return; }
-      app.style.zoom = Math.min(1, (avail - 8) / 880);
+      app.style.zoom = Math.min(1, (avail - 8) / 640);
     }
     fit(); window.addEventListener('resize', fit);
   })();
@@ -203,7 +203,7 @@
   auto();
 
   // Scroll reveal (also triggers chart animations)
-  $$('.sec__h,.why__grid,.owner__shot,.owner__copy,.owner__shot,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo>.form,.intel').forEach(function (el) { el.classList.add('rv'); });
+  $$('.sec__h,.why__grid,.insights-visual,.owner__copy,.owner__shot,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo>.form,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
     en.forEach(function (e) { e.target.classList.toggle('in-view', e.isIntersecting); });
   }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
