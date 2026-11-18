@@ -1318,3 +1318,9 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .wv-li small,.wv-sub2{opacity:1;color:#c3d6dd}
 .wv-hi{color:#7ff0e9}
 .wv-line em{color:#7ff0e9}
+
+/* dark panels: deep TEAL (not navy) */
+.wv-dark{background:#006f73}
+.wv-li{background:#0a8589}
+.wv-li small,.wv-sub2{color:#d6f2f2}
+.wv-hi,.wv-line em{color:#ffe9c4}
