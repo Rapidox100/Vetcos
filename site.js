@@ -122,8 +122,9 @@
   items.forEach(function (li, i) {
     $('button', li).addEventListener('click', function () {
       // tapping the open card (the minus) closes it; tapping another opens that one
-      if (li.classList.contains('is-on')) li.classList.remove('is-on'); else pick(i);
+      pick(i);
     });
+    li.addEventListener('mouseenter', function () { if (window.matchMedia('(hover:hover)').matches) pick(i); });
   });
 
   // Dashboard: on small screens scale the full desktop layout to fit (nothing collapses)

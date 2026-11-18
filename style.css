@@ -1152,3 +1152,25 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .phone-cta{width:100%;border:0;border-radius:9px;background:#0f3d3a;color:#fff;font-size:.68rem;font-weight:700;padding:.55rem .45rem;pointer-events:none;font-family:var(--sans)}
 /* phones/tablets keep the same layout, scaled to fit (JS sets zoom) */
 @media(max-width:1020px){.insights-visual{width:640px;max-width:none}}
+
+/* =====  WHY VETCOS v3: friendly, everything readable at a glance (no + / - toggles)  ===== */
+.why__list li .why__more,.why__list li.is-on .why__more{max-height:none;overflow:visible;padding:0 22px 20px 82px;display:block}
+.why__list button::after,.why__list li.is-on button::after{display:none}
+.why__list button{padding:20px 22px 8px 20px;align-items:center;cursor:pointer}
+.why__more p{margin:0 0 10px;font-size:1rem;color:var(--gray)}
+.why__list li.is-on .why__more p{color:var(--ink)}
+.why__more .chips,.why__more .link{display:none}
+.why__list li.is-on .why__more .chips{display:flex;margin:0 0 14px}
+.why__list li.is-on .why__more .link{display:inline-flex}
+.why__list li{border:2px solid var(--line);background:#fff;box-shadow:none;transition:.2s}
+.why__list li:hover{border-color:var(--teal);transform:none}
+.why__list li.is-on{background:#effaf8;border-color:var(--teal);box-shadow:0 6px 18px rgba(0,179,181,.14)}
+.why__list li.is-on .t,.why__list li.is-on .t small{color:var(--ink)}
+.why__list li.is-on .t small{color:var(--gray)}
+.why__list li.is-on .n{background:var(--teal);color:#fff}
+.why__list li.is-on .chips li{background:#fff;color:var(--teal-d);border:1px solid #bfe9e5}
+.why__shot{background:#eaf6f4}
+@media(max-width:560px){
+  .why__list li .why__more,.why__list li.is-on .why__more{padding:0 14px 14px 14px}
+  .why__list button{padding:14px 14px 6px}
+}
