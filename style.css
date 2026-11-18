@@ -1010,46 +1010,39 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .flow .intel>b{color:var(--ink)}
 .flow .chips li{background:var(--mint);color:var(--teal-d);border:0}
 
-/* =====  PLATFORM v2: split layout, glass feature cards + numbered list (no white boxes)  ===== */
-.platform .sys{counter-reset:sy}
-.platform .sec__h--row{display:block;max-width:none}
-.platform .sec__h--row>p:not(.kick){margin-top:18px;max-width:42ch}
-@media(min-width:1021px){
-  .platform{display:grid;grid-template-columns:5fr 7fr;column-gap:clamp(40px,6vw,96px);align-items:start}
-  .platform .sec__h--row{position:sticky;top:110px;margin-bottom:0}
-}
-.platform .sys{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
-.platform .sys article,.platform .sys .sys--w{background:none;border:0;box-shadow:none;border-radius:0;padding:22px 0;transform:none;grid-column:span 1;border-top:1px solid rgba(255,255,255,.16);counter-increment:sy;position:relative;padding-left:48px}
-.platform .sys article:hover{border-color:var(--orange);transform:none}
-.platform .sys article::before{content:counter(sy,decimal-leading-zero);position:absolute;left:0;top:24px;width:auto;height:auto;margin:0;background:none;border-radius:0;font-family:var(--serif);font-weight:700;font-size:.95rem;color:var(--orange);display:block}
-.platform .sys h3,.platform .sys .sys--w h3{color:#fff;font-size:1.2rem;margin-bottom:6px}
-.platform .sys p{color:#aebfc8;font-size:.93rem}
-/* the three featured items: full-width glass cards */
-.platform .sys .sys--w,.platform .sys .sys--w:last-child{grid-column:1/-1;background:linear-gradient(135deg,rgba(0,179,181,.20),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:24px 28px 24px 70px;margin:0 0 14px;backdrop-filter:blur(4px)}
-.platform .sys .sys--w::before{left:28px;top:26px;font-size:1.05rem}
-.platform .sys .sys--w h3,.platform .sys .sys--w:last-child h3{color:#7ff0e9;font-size:1.45rem}
-.platform .sys .sys--w:last-child{margin:14px 0 0;order:99}
-.platform .sys article:nth-last-child(2),.platform .sys article:nth-last-child(3){border-bottom:0}
-@media(max-width:1020px){.platform .sys{grid-template-columns:1fr 1fr}}
+/* =====  PLATFORM v3: light background, icon cards in a clean 4-column grid  ===== */
+.platform{background:linear-gradient(180deg,#fff 0%,#eef9f7 100%);color:var(--ink);display:block}
+.platform::before{display:none!important}
+.platform .sec__h--row{display:block;position:static;max-width:760px;margin:0 auto 48px;text-align:center}
+.platform .sec__h--row>p:not(.kick){margin:16px auto 0;max-width:62ch;color:var(--gray)}
+.platform .sec__h--row .kick{margin-bottom:18px}
+.platform h2{color:var(--ink)}
+.platform em{color:var(--teal)}
+.platform .sys{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:none}
+.platform .sys article,.platform .sys .sys--w,.platform .sys .sys--w:last-child{display:block;position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 24px;margin:0;box-shadow:0 10px 30px rgba(11,36,48,.06);backdrop-filter:none;order:0;grid-column:span 1;counter-increment:none;transition:.25s}
+.platform .sys article::before{display:none}
+.platform .sys article:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,36,48,.12);border-color:var(--teal)}
+.platform .sys .sys--w{grid-column:span 2;display:grid;grid-template-columns:auto 1fr;column-gap:20px;align-items:center;background:linear-gradient(135deg,#fff 0%,#eefaf8 100%)}
+.platform .sys .sys--w:last-child{grid-column:1/-1}
+.platform .sys .sys--w .sy-i{grid-row:span 2}
+.platform .sys h3,.platform .sys .sys--w h3,.platform .sys .sys--w:last-child h3{color:var(--ink);font-size:1.15rem;margin:14px 0 6px}
+.platform .sys .sys--w h3{margin:0 0 6px;font-size:1.3rem}
+.platform .sys p{color:var(--gray);font-size:.92rem;margin:0}
+.sy-i{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;flex:none}
+.sy-i--teal{background:#dff6f4;color:#007f83}.sy-i--orange{background:#fff0e2;color:#e36a12}.sy-i--blue{background:#e8f0ff;color:#3b6fe0}
+.sy-i--violet{background:#efe9fb;color:#7a4de0}.sy-i--green{background:#e3f6ef;color:#1fa06a}.sy-i--pink{background:#fdecf1;color:#d63a6e}
+.sy-i--amber{background:#fff4d9;color:#c88a00}.sy-i--sky{background:#e1effa;color:#2b8ac7}
+@media(max-width:1020px){.platform .sys{grid-template-columns:1fr 1fr}.platform .sys .sys--w{grid-column:1/-1}}
 @media(max-width:560px){
-  .platform .sys{grid-template-columns:1fr}
-  .platform .sys article,.platform .sys .sys--w{padding:16px 0 16px 40px;border-radius:0}
-  .platform .sys article::before{top:18px}
-  .platform .sys .sys--w,.platform .sys .sys--w:last-child{padding:18px 18px 18px 52px;border-radius:16px}
-  .platform .sys .sys--w::before{left:18px;top:20px}
-  .platform .sys h3,.platform .sys .sys--w h3{font-size:1.05rem}
-  .platform .sys .sys--w h3{font-size:1.15rem}
-  .platform .sys p{font-size:.84rem}
+  .platform .sec__h--row{text-align:left;margin-bottom:26px}
+  .platform .sys{grid-template-columns:1fr 1fr;gap:10px}
+  .platform .sys article,.platform .sys .sys--w{padding:16px 14px;border-radius:16px}
+  .platform .sys .sys--w{grid-template-columns:auto 1fr;column-gap:12px}
+  .sy-i{width:40px;height:40px;border-radius:12px}
+  .platform .sys h3{font-size:1rem;margin-top:10px}
+  .platform .sys .sys--w h3{font-size:1.1rem;margin-top:0}
+  .platform .sys p{font-size:.8rem;line-height:1.4}
 }
-@media(max-width:560px){
-  .platform .sys{grid-template-columns:1fr 1fr;gap:0 18px}
-  .platform .sys article{padding:14px 0 16px}
-  .platform .sys article::before{position:static;display:block;margin-bottom:4px;font-size:.8rem}
-  .platform .sys .sys--w,.platform .sys .sys--w:last-child{grid-column:1/-1}
-  .platform .sys h3{font-size:1rem}
-  .platform .sys p{font-size:.78rem;line-height:1.4}
-}
-@media(max-width:560px){
-  .platform .sys .sys--w::before{position:absolute;left:18px;top:20px;margin:0}
-  .platform .sys .sys--w{padding:18px 18px 18px 54px}
-}
+.platform .sys .sys--w:last-child{display:grid;grid-template-columns:auto 1fr;column-gap:20px;align-items:center}
+.platform .sys .sys--w:last-child h3{margin:0 0 6px}
+@media(max-width:560px){.platform .sys .sys--w:last-child{column-gap:12px}}
