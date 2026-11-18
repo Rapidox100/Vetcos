@@ -981,3 +981,10 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   :root{--pad:max(20px,calc((100% - 1500px)/2))}
 }
 @media(min-width:1021px){.pnav__bar{width:min(1500px,100% - 28px)}}
+
+/* BRAND NAVY replaces the dark green (no more WhatsApp look). Phone-mock header stays WhatsApp green. */
+:root{--deep:#0b2430;--ink2:#143a4c;--ink3:#1b4a60}
+.foot{background-color:#071820}
+.owner{background-image:radial-gradient(640px 420px at 100% 0%,rgba(0,179,181,.28),transparent 70%)}
+.demo{background-image:radial-gradient(620px 500px at 0% 100%,rgba(248,104,0,.22),transparent 70%)}
+.dark em{color:#4fd6d0}
