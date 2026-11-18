@@ -113,19 +113,19 @@
     heads.forEach(function (el) { hio.observe(el); });
   }
 
-  // Why Vetcos accordion + screenshot swap
-  var items = $$('#whyList > li'), shots = $$('.why__shot img');
-  function pick(i) {
-    items.forEach(function (li, j) { li.classList.toggle('is-on', i === j); });
-    shots.forEach(function (im, j) { im.classList.toggle('on', i === j); });
-  }
-  items.forEach(function (li, i) {
-    $('button', li).addEventListener('click', function () {
-      // tapping the open card (the minus) closes it; tapping another opens that one
-      pick(i);
+  // Why Vetcos: tabs + detail panel (original layout)
+  (function () {
+    var tabs = $$('#whyTabs .why-tab'), panes = $$('.why-pane'), imgs = $$('.why-visual-img');
+    function pick(i) {
+      tabs.forEach(function (t, j) { t.classList.toggle('is-active', i === j); t.setAttribute('aria-selected', i === j); });
+      panes.forEach(function (p, j) { p.classList.toggle('is-active', i === j); });
+      imgs.forEach(function (m, j) { m.classList.toggle('is-active', i === j); });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { pick(i); });
+      t.addEventListener('mouseenter', function () { if (window.matchMedia('(hover:hover)').matches) pick(i); });
     });
-    li.addEventListener('mouseenter', function () { if (window.matchMedia('(hover:hover)').matches) pick(i); });
-  });
+  })();
 
   // Dashboard: on small screens scale the full desktop layout to fit (nothing collapses)
   (function () {
