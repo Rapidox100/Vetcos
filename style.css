@@ -1324,3 +1324,4 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .wv-li{background:#0a8589}
 .wv-li small,.wv-sub2{color:#d6f2f2}
 .wv-hi,.wv-line em{color:#ffe9c4}
+.wv-bub-img img{height:150px;object-position:50% 22%}
