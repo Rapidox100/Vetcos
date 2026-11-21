@@ -1825,3 +1825,5 @@ html{scroll-padding-top:90px}
 .owner .kick--l{background:#fff;color:var(--teal-d);border:1.5px solid rgba(0,179,181,.4);box-shadow:0 6px 18px rgba(60,120,180,.1)}
 .owner .dash-window{box-shadow:0 22px 56px rgba(60,120,180,.22)}
 .owner .phone-shell{box-shadow:0 18px 36px rgba(60,120,180,.28)}
+.owner em,.owner.dark em,.owner h2 em,.owner h2 .ch{--x:0}
+.owner h2 em,.owner h2 em .ch{color:var(--teal)!important}
