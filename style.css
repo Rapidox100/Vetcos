@@ -1951,3 +1951,11 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .ha-pets-sh{left:-6%;width:46%;top:66.3cqw;height:5.2cqw;filter:blur(4px);
   background:radial-gradient(ellipse at 50% 50%,rgba(15,35,75,.62) 0%,rgba(15,35,75,.38) 42%,rgba(15,35,75,.12) 70%,transparent 90%)}
 @media(max-width:1020px){.ha-pets-sh{left:-5%;width:54%;top:65.8cqw;height:4.6cqw}}
+
+/* pets: one tight shadow under the dog's paws and one under the cat (they rest at different heights) */
+.ha-pets-sh{left:-10%;top:36.5cqw;width:50%;height:auto;aspect-ratio:1522/1021;border-radius:0;background:none!important;filter:none;z-index:1;pointer-events:none}
+.ha-pets-sh::before,.ha-pets-sh::after{content:"";position:absolute;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 50%,rgba(10,25,60,.7) 0%,rgba(10,25,60,.45) 38%,rgba(10,25,60,.14) 68%,transparent 90%);filter:blur(2.5px)}
+.ha-pets-sh::before{left:3%;width:40%;top:94.6%;height:6.4%}    /* under the dog's paws */
+.ha-pets-sh::after{left:44%;width:57%;top:86.5%;height:7%}       /* under the cat's belly and tail */
+@media(max-width:1020px){.ha-pets-sh{left:-3.5%;top:28.45cqw;width:60%}}
