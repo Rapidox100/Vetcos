@@ -117,7 +117,7 @@
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     heads.forEach(splitHeading);
     var hio = new IntersectionObserver(function (en) {
-      en.forEach(function (e) { e.target.classList.toggle('is-in', e.isIntersecting); });
+      en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); hio.unobserve(e.target); } });
     }, { threshold: 0, rootMargin: '-8% 0px -8% 0px' });
     heads.forEach(function (el) { hio.observe(el); });
   }
@@ -234,7 +234,7 @@
   // Scroll reveal (also triggers chart animations)
   $$('.sec__h,.why__grid,.insights-visual,.owner__copy,.owner__shot,.clinic__fig,.wa__stage,.role,.story__img,.story__r,.sys article,.ind li,.demo__l,.demo>.form,.intel').forEach(function (el) { el.classList.add('rv'); });
   var io = new IntersectionObserver(function (en) {
-    en.forEach(function (e) { e.target.classList.toggle('in-view', e.isIntersecting); });
+    en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
   }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
   $$('.rv').forEach(function (el) { io.observe(el); });
 
