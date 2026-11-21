@@ -1639,3 +1639,15 @@ html{scroll-padding-top:90px}
 .p-trend h4{color:#1c3f94}
 .p-x i{color:#35568f}
 .p-n{color:#2a63c9;font-weight:600}
+/* icons and photos taken from the reference image */
+.d-canvas .di{display:block;flex:none;max-width:none}
+.d-nav .di{margin-bottom:2px}
+.d-qa .di{margin-right:-2px}
+.d-qa2 .di{margin-right:2px}
+.d-search .di{width:24px;height:25px}
+.d-bell .di{display:block}
+.d-card .d-pr .d-av{filter:none!important;background:none!important;box-shadow:none!important;width:46px!important;height:46px!important;border-radius:50%;object-fit:cover}
+.d-me{width:62px;height:62px;border-radius:50%;object-fit:cover;background:none;box-shadow:0 0 0 3px #fff,0 2px 8px rgba(40,90,160,.2)}
+.p-ic .di{display:block}
+.p-menu .di{display:block}
+.p-n .di{margin-bottom:1px}
