@@ -1508,3 +1508,8 @@ html{scroll-padding-top:90px}
 @media(min-width:1021px){.hero--v2 h1{font-size:clamp(2.2rem,3.45vw,4.2rem)}}
 @media(max-width:1020px){.ha-pill{margin-top:-11%;position:relative;z-index:2}}
 @media(max-width:1020px){.ha-pill{margin-top:-8%}}
+.ha-pets{position:absolute;left:-1.5%;bottom:-0.5%;width:55.5%;height:auto;z-index:1;pointer-events:none;filter:drop-shadow(0 .6cqw 1.2cqw rgba(30,70,110,.18))}
+.ha-pill{z-index:2}
+.ha-pets{left:-3.5%;bottom:-3.2%;width:60%}
+.ha-pets{top:28.45cqw;bottom:auto;left:-3.5%;width:60%}
+@media(max-width:1020px){.ha-pill{margin-top:1%;background:#fff}}
