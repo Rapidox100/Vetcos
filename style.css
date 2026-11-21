@@ -1909,3 +1909,14 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .platform .sys article:not(.sys--w) h3{margin:2px 0 6px;font-size:1.08rem}
   .platform .sys article:not(.sys--w) p{margin:0;font-size:.9rem;line-height:1.45}
 }
+
+/* With reviews hidden, Trusted & Secure is a slim strip instead of a full section */
+.reviews-off .story{padding-top:28px;padding-bottom:28px;background:var(--cream)}
+.reviews-off .story__r{width:100%}
+.reviews-off .secure{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:6px 28px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 26px;margin:0}
+.reviews-off .secure b{font-size:1.2rem;white-space:nowrap}
+.reviews-off .secure p{margin:0;font-size:.95rem}
+.reviews-off .secure .chips{flex-wrap:nowrap}
+.reviews-off .secure .chips li{white-space:nowrap}
+@media(max-width:1020px){.reviews-off .secure{grid-template-columns:1fr}.reviews-off .secure .chips{flex-wrap:wrap}}
+@media(max-width:560px){.reviews-off .story{padding-top:20px;padding-bottom:20px}.reviews-off .secure{padding:16px}}
