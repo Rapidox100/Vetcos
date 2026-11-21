@@ -1786,3 +1786,5 @@ html{scroll-padding-top:90px}
 .d-phone .p-menu{right:20px}
 @media(min-width:1021px) and (max-width:1500px){.ha-dash{left:6.2%}}
 @media(min-width:1021px) and (max-width:1500px){.hero--v2 h1{font-size:max(2rem,4.2cqw)}}
+.d-phone .p-sig{background:none!important;width:66px;height:14px;opacity:1;border-radius:0;right:34px;top:24px}
+.d-phone .p-sig svg{display:block}
