@@ -1802,3 +1802,9 @@ html{scroll-padding-top:90px}
   .ha-pets{left:-10%}
   .d-phone{top:345px!important}
 }
+/* pill: never overflow its box - wrap to two rows when space runs out */
+@media(min-width:1021px){
+  .hero--v2 .hero__l .ha-pill{flex-wrap:wrap;row-gap:10px;border-radius:34px;width:fit-content;max-width:100%;min-width:0}
+  .hero--v2 .hero__l .ha-pill li{min-width:0}
+}
+@media(min-width:1021px){.hero--v2 .hero__l .ha-pill{gap:clamp(6px,.6vw,12px);padding:10px 16px 10px 12px}.hero--v2 .hero__l .ha-pill li{gap:7px}.hero--v2 .hero__l .ha-ic{width:38px;height:38px}}
