@@ -1739,3 +1739,16 @@ html{scroll-padding-top:90px}
   .wa__side li.wc small{font-size:.85rem}
 }
 @media(max-width:560px){.wa__stage{gap:10px}.wa__side li.wc{padding:14px 12px}.wa__side li.wc b{font-size:.92rem}.wa__side li.wc small{font-size:.78rem}}
+/* compact cards (like the reference) */
+@media(min-width:1021px){
+  .wa__stage{grid-template-columns:minmax(0,310px) 300px minmax(0,310px);justify-content:center;gap:clamp(50px,6vw,110px);max-width:1100px;align-items:center}
+  .wa__side{align-self:center;gap:14px}
+  .wa__side--l{grid-auto-rows:auto}
+  .wa__side--r{grid-template-rows:none;grid-auto-rows:auto;align-content:center;margin:0;gap:22px}
+  .wa__side li.wc,.wa__side--l li.wc,.wa__side--r li.wc{padding:12px 16px;gap:14px;min-height:0;border-radius:18px;box-shadow:0 5px 16px rgba(70,130,190,.07)}
+  .wa__side li.wc .wc__i{width:48px;height:48px}
+  .wa__side li.wc .wc__i svg{width:26px;height:26px}
+  .wa__side li.wc b{font-size:1rem;margin-bottom:3px}
+  .wa__side li.wc small{font-size:.86rem;line-height:1.3}
+  .wa__stage .phone{width:290px}
+}
