@@ -1897,3 +1897,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .hero__art{margin-top:-14px}
 }
 .hero--v2 .hero__stats dd{color:var(--teal)}
+/* Simplicity cards: supplied app-style icons */
+.platform .sy-i{background:none!important;width:58px;height:58px;border-radius:0;color:inherit;display:block;flex:none}
+.platform .sy-i img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(40,70,120,.18))}
+.platform .sys .sys--w .sy-i{width:64px;height:64px}
+@media(max-width:560px){.platform .sy-i{width:46px;height:46px}.platform .sys .sys--w .sy-i{width:50px;height:50px}}
