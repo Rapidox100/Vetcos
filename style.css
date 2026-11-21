@@ -1,6 +1,6 @@
 :root{
   /* Vetcos brand (from logo) */
-  --teal:#00b3b5; --teal-d:#007f83; --teal-l:#dff6f4; --mint:#e8f8f6;
+  --teal:#00bab8; --teal-d:#007f83; --teal-l:#dff6f4; --mint:#e8f8f6;
   --orange:#f86800; --orange-d:#d85a00; --peach:#fff1e2;
   --cream:#fef9f3; --cream2:#faf3e8; --paper:#fef9f3; --white:#fff;
   --ink:#0b2430;                       /* text navy */
@@ -1840,3 +1840,7 @@ html{scroll-padding-top:90px}
 .demo .kick--l{background:#fff;color:var(--teal-d);border:1.5px solid rgba(0,179,181,.4);box-shadow:0 6px 18px rgba(60,120,180,.1)}
 .demo .form{box-shadow:0 22px 56px rgba(60,120,180,.22)}
 .platform .sys article,.platform .sys .sys--w{box-shadow:0 6px 18px rgba(60,120,180,.10)}
+/* ONE teal everywhere = the logo's own teal */
+:root{--teal:#00bab8}
+.sec.dark .vw,.foot .vw,.vw{filter:none!important}
+.foot__wm{filter:none!important}
