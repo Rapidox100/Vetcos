@@ -1689,3 +1689,4 @@ html{scroll-padding-top:90px}
 }
 @media(min-width:1021px){.ha-dash{left:12.5%;top:0}}
 .ha-pets{width:50%;left:-3%;top:36.5cqw}
+@media(max-width:1020px){.ha-pets{width:60%;left:-3.5%;top:28.45cqw}.ha-dash{left:19.6%}}
