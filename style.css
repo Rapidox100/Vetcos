@@ -1678,3 +1678,12 @@ html{scroll-padding-top:90px}
 .hero--v2 h1{font-size:clamp(1.8rem,8.6cqw,4.4rem)}
 .hero--v2 .hero__lead{font-size:clamp(1rem,4.3cqw,1.45rem)}
 @media(max-width:1020px){.hero--v2 h1{font-size:clamp(2rem,9vw,3.4rem)}.hero--v2 .hero__logo{width:min(260px,64vw)}.hero--v2 .hero__lead{font-size:1.1rem}}
+@media(min-width:1021px){
+  .hero--v2 .hero__l{container-type:normal}
+  .hero--v2 h1{font-size:clamp(2.6rem,4.7vw,5.6rem);white-space:nowrap}
+  .hero--v2 h1 .hl{display:block;white-space:nowrap}
+}
+@media(min-width:1021px){
+  .hero.hero--v2{container-type:inline-size}
+  .hero--v2 h1{font-size:max(2.2rem,4.95cqw)}
+}
