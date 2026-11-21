@@ -47,7 +47,6 @@
       gsap.fromTo(img, { scale: 1 }, { scale: 1.1, duration: .25, yoyo: true, repeat: 1, ease: 'power2.out', overwrite: 'auto' });
     });
     // entrance
-    gsap.from(logo, { scale: 0, opacity: 0, duration: .8, ease: 'back.out(1.7)' });
     gsap.from($$('#pnavItems li'), { opacity: 0, x: -20, duration: .6, stagger: .05, ease: 'power2.out', delay: .2 });
   }
 
@@ -73,6 +72,16 @@
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   secs.forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+
+  // Nav logo: hidden at the top (the hero shows the big one), fades in once you scroll past it
+  (function () {
+    var nav = $('#nav'), logo = $('.hero__logo');
+    function check() {
+      var limit = logo ? (logo.getBoundingClientRect().bottom + window.scrollY - 70) : 120;
+      nav.classList.toggle('logo-on', window.scrollY > limit);
+    }
+    check(); window.addEventListener('scroll', check, { passive: true }); window.addEventListener('resize', check);
+  })();
 
   // ---- Letter-by-letter headings: fade in, slide up, de-blur ----
   function splitHeading(el) {

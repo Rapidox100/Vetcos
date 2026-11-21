@@ -1690,5 +1690,8 @@ html{scroll-padding-top:90px}
 @media(min-width:1021px){.ha-dash{left:12.5%;top:0}}
 .ha-pets{width:50%;left:-3%;top:36.5cqw}
 @media(max-width:1020px){.ha-pets{width:60%;left:-3.5%;top:28.45cqw}.ha-dash{left:19.6%}}
-.hero--v2 .hero__tagline{margin:0 0 clamp(12px,1.4vw,20px)}
-@media(min-width:1021px){.hero--v2 .hero__l{padding-top:clamp(40px,5vw,90px)}}
+
+/* NAV LOGO: invisible at the top of the page, slides/fades in after scrolling past the hero logo */
+.pnav__logo{opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s ease,transform .35s ease,visibility 0s .35s}
+.pnav.logo-on .pnav__logo{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s ease}
+.pnav__logo:hover{transform:none}
