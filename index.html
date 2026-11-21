@@ -48,41 +48,19 @@
 <main>
 
 <!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero__scene" aria-hidden="true">
-    <svg class="hs-hills" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="hsDome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2c4" stop-opacity=".95"/><stop offset="1" stop-color="#ffeedd" stop-opacity="0"/></linearGradient>
-        <linearGradient id="hsMid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00b3b5"/><stop offset="1" stop-color="#5fd0cf"/></linearGradient>
-        <linearGradient id="hsOr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a4d"/><stop offset=".55" stop-color="#f86800"/><stop offset="1" stop-color="#f86800"/></linearGradient>
-        <linearGradient id="hsOr2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".6" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-        <filter id="hsBlur" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="2.4"/></filter><filter id="hsBlur2" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="3.2"/></filter>
-      </defs>
-      <path d="M0 33C6 26 20 24 32 29C40 33 46 40 48 48L0 70Z" fill="url(#hsDome)" filter="url(#hsBlur2)" opacity=".5"/>
-      <path d="M0 52C12 51 28 55 46 63C66 72 84 74 100 73L100 88L0 88Z" fill="url(#hsMid)" filter="url(#hsBlur2)" opacity=".22"/>
-      
-      <path d="M52 86C68 80 86 79 100 81L100 100L52 100Z" fill="#00b3b5" filter="url(#hsBlur2)" opacity=".14"/>
-      <path d="M0 86C12 84 26 88 40 94C56 100 78 102 100 100L100 104L0 104Z" fill="url(#hsOr)" filter="url(#hsBlur2)" opacity=".5"/>
-      <path d="M0 88C16 86 34 92 52 97C68 101 86 100 100 99L100 100L0 100Z" fill="url(#hsOr2)"/>
-    </svg>
-    <img class="hs-pets" src="assets/hero-dog-cat.svg" alt="" width="843" height="813">
-    
-  </div>
+<section class="hero hero--v2" id="top">
+  <svg class="hero__paw" viewBox="0 0 46 42" aria-hidden="true"><g fill="currentColor" transform="rotate(14 23 21)"><ellipse cx="23" cy="30" rx="12" ry="10"/><ellipse cx="7" cy="16" rx="5" ry="7"/><ellipse cx="18" cy="8" rx="5" ry="7"/><ellipse cx="29" cy="8" rx="5" ry="7"/><ellipse cx="40" cy="16" rx="5" ry="7"/></g></svg>
   <div class="hero__l">
-    <p class="hero__tagline">The Future of Vet Care</p>
+    <img class="hero__logo" src="assets/vetcos-logo-trim.png" alt="Vetcos – The Future of Vet Care" width="675" height="224">
     <h1 data-label="Veterinary Clinical Operating System"><strong class="hl"><span class="hw"><img class="hv-v" src="assets/vetcos-v.png" alt="" width="215" height="214">eterinary</span> <span class="hw"><span class="hv-o">C</span>linical</span></strong> <strong class="hl"><span class="hw"><span class="hv-o">O</span>perating</span> <span class="hw"><span class="hv-o">S</span>ystem</span></strong></h1>
-    <p class="hero__sub">The Clinical Operating System for growing veterinary practices in India.</p>
-    <p class="hero__vals"><b>Better Care</b><b>Higher Revenue</b><b>Smoother Operations</b><b>Happiest Pet Parents</b></p>
+    <p class="hero__lead">Run your clinic. Care your patients.<br>Grow your practice.</p>
     <div class="hero__btns">
-      <a href="#demo" class="btn btn--o btn--lg">Book a demo</a>
-      <a href="#owner" class="btn btn--line btn--lg">See owner analytics</a>
+      <a href="#demo" class="btn btn--o btn--lg hero__cta">Book a Demo <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
-  <div class="hero__r">
-    <div class="arch"><img src="assets/hero-dog.jpg" alt="Golden retriever" width="682" height="1024"></div>
-    <div class="orb"><img src="assets/hero-cat.png" alt="" width="415" height="739"></div>
-    <div class="badge badge--1"><b>1M+</b> pets cared for on <img class="vw" src="assets/vetcos-wordmark.png" alt="Vetcos" width="720" height="214"></div>
-    <div class="badge badge--2"><b>4.9 / 5</b> rated by veterinarians</div>
+  <div class="hero__art">
+    <img class="ha-img" src="assets/hero-art.webp" alt="The Vetcos dashboard on a tablet and phone, with a golden retriever and a tabby cat" width="1738" height="1157">
+    <ul class="ha-pill"><li><span class="ha-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S3.5 15 3.5 8.8A4.6 4.6 0 0 1 12 6.4a4.6 4.6 0 0 1 8.5 2.4C20.5 15 12 20.5 12 20.5z"/></svg></span><span class="ha-t">Better<br>Care</span></li><li><span class="ha-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V13M9 20V9M14 20v-6M19 20V6"/><path d="M13 5h6v6"/></svg></span><span class="ha-t">Higher<br>Revenue</span></li><li><span class="ha-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/></svg></span><span class="ha-t">Smarter<br>Operations</span></li><li><span class="ha-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="16" rx="5" ry="4.2"/><ellipse cx="5.4" cy="11" rx="2" ry="2.8"/><ellipse cx="9.4" cy="6.6" rx="2" ry="2.8"/><ellipse cx="14.6" cy="6.6" rx="2" ry="2.8"/><ellipse cx="18.6" cy="11" rx="2" ry="2.8"/></svg></span><span class="ha-t">Happier<br>Pet Parents</span></li></ul>
   </div>
   <dl class="hero__stats">
     <div><dd>500+</dd><dt>Clinics onboard</dt></div>
