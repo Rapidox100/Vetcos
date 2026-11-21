@@ -1896,3 +1896,4 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .hero--v2 .hero__stats dd{font-size:1.15rem}
   .hero__art{margin-top:-14px}
 }
+.hero--v2 .hero__stats dd{color:var(--teal)}
