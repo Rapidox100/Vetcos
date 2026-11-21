@@ -1671,3 +1671,10 @@ html{scroll-padding-top:90px}
 @media(max-width:1020px){.hero--v2 .hero__l .ha-pill{position:relative;left:auto;top:auto;width:100%;margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;padding:14px 16px;border-radius:26px;gap:12px 10px;container-type:normal}.hero--v2 .hero__l .ha-ic{width:42px;height:42px}.hero--v2 .hero__l .ha-t{font-size:.9rem}}
 @media(min-width:1021px){.hero--v2 .hero__art{align-self:start;margin-top:-6px}}
 @media(min-width:1021px){.hero--v2 .hero__l .ha-pill{padding:10px 20px 10px 14px;gap:clamp(8px,.9vw,18px)}.hero--v2 .hero__l .ha-ic{width:40px;height:40px}.hero--v2 .hero__l .ha-t{font-size:.84rem}.hero--v2 .hero__l .ha-pill li{gap:8px}}
+
+/* HERO: size text from the column's own width (cqw) so it is identical in every browser, whatever the page zoom */
+.hero--v2 .hero__l{container-type:inline-size}
+.hero--v2 .hero__logo{width:clamp(190px,62cqw,340px)}
+.hero--v2 h1{font-size:clamp(1.8rem,8.6cqw,4.4rem)}
+.hero--v2 .hero__lead{font-size:clamp(1rem,4.3cqw,1.45rem)}
+@media(max-width:1020px){.hero--v2 h1{font-size:clamp(2rem,9vw,3.4rem)}.hero--v2 .hero__logo{width:min(260px,64vw)}.hero--v2 .hero__lead{font-size:1.1rem}}
