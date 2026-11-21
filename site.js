@@ -184,15 +184,17 @@
   // Clinic: colour is revealed under the mouse (sketch -> colour), smooth follow
   (function () {
     var fg = $('#clinicFig'); if (!fg) return;
-    var tx = -400, ty = -400, cx = -400, cy = -400, tr = 0, cr = 0, run = false, R = 200;
+    var tx = -400, ty = -400, cx = -400, cy = -400, tr = 0, cr = 0, run = false, R = 300;
     function frame() {
-      cx += (tx - cx) * .2; cy += (ty - cy) * .2; cr += (tr - cr) * .12;
+      cx += (tx - cx) * .45; cy += (ty - cy) * .45; cr += (tr - cr) * .16;
       fg.style.setProperty('--mx', cx + 'px'); fg.style.setProperty('--my', cy + 'px'); fg.style.setProperty('--r', Math.max(cr, .1) + 'px');
       if (Math.abs(tx - cx) + Math.abs(ty - cy) + Math.abs(tr - cr) > .5) requestAnimationFrame(frame); else run = false;
     }
     function go() { if (!run) { run = true; requestAnimationFrame(frame); } }
     fg.addEventListener('pointermove', function (e) {
-      var b = fg.getBoundingClientRect(); tx = e.clientX - b.left; ty = e.clientY - b.top; tr = R;
+      // convert pointer position to the picture's own CSS pixels (handles the page's 85% zoom in every browser)
+      var b = fg.getBoundingClientRect(), k = fg.offsetWidth ? b.width / fg.offsetWidth : 1;
+      tx = (e.clientX - b.left) / k; ty = (e.clientY - b.top) / k; tr = R;
       if (cr < 1) { cx = tx; cy = ty; } go();
     });
     fg.addEventListener('pointerleave', function () { tr = 0; go(); });
