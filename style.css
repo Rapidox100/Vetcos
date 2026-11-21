@@ -1920,3 +1920,4 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .reviews-off .secure .chips li{white-space:nowrap}
 @media(max-width:1020px){.reviews-off .secure{grid-template-columns:1fr}.reviews-off .secure .chips{flex-wrap:wrap}}
 @media(max-width:560px){.reviews-off .story{padding-top:20px;padding-bottom:20px}.reviews-off .secure{padding:16px}}
+.india .ind li,.india .ind li:nth-last-child(n){border-top:4px solid var(--teal)!important}
