@@ -1869,3 +1869,15 @@ html{scroll-padding-top:90px}
 .hero__art,.hero__art *,.ha-stage,.ha-dash,.ha-dash *,.ha-pets,.phone,.phone *,.insights-visual,.insights-visual *,.why-visual,.why-visual *,.clinic__fig img{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .hero__art img,.phone img,.insights-visual img,.why-visual img,.clinic__fig img{-webkit-user-drag:none;user-drag:none}
 .hero__art ::selection,.phone ::selection,.insights-visual ::selection,.why-visual ::selection{background:transparent}
+
+/* hero facts row (replaces the stats) */
+.hero--v2 .hero__stats dd{font-size:clamp(1.5rem,2.5vw,2.5rem);letter-spacing:-.025em;white-space:nowrap;line-height:1.1}
+.hero--v2 .hero__stats dt{margin-top:8px}
+@media(max-width:560px){.hero--v2 .hero__stats dd{font-size:1.05rem;white-space:normal;line-height:1.15}.hero--v2 .hero__stats dt{font-size:.58rem;letter-spacing:.05em}}
+
+/* REVIEWS HIDDEN (switch: class "reviews-off" on <body>) */
+.reviews-off .story__img,.reviews-off .story__r>.kick,.reviews-off .quotes,.reviews-off .dots,
+.reviews-off a[href="#parents"]{display:none!important}
+.reviews-off .story{grid-template-columns:1fr;justify-items:center}
+.reviews-off .story__r{width:min(760px,100%)}
+.reviews-off .secure{margin-top:0}
