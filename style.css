@@ -1921,3 +1921,31 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media(max-width:1020px){.reviews-off .secure{grid-template-columns:1fr}.reviews-off .secure .chips{flex-wrap:wrap}}
 @media(max-width:560px){.reviews-off .story{padding-top:20px;padding-bottom:20px}.reviews-off .secure{padding:16px}}
 .india .ind li,.india .ind li:nth-last-child(n){border-top:4px solid var(--teal)!important}
+
+/* =====  HERO FLOOR: ground plane, contact shadows and soft glossy reflections  ===== */
+.ha-ground{position:absolute;left:-40%;right:-25%;top:46cqw;bottom:-16cqw;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(150,185,225,0) 0%,rgba(150,185,225,.26) 14%,rgba(205,224,243,.5) 45%,rgba(255,255,255,.72) 100%)}
+.ha-stage .ha-dash{z-index:1}
+/* tablet + phone shadows (they live inside the scaled canvas so they stay aligned) */
+.d-tablet::before,.d-phone::before{content:"";position:absolute;pointer-events:none;z-index:-1;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.42) 0%,rgba(20,45,90,.22) 38%,transparent 72%);filter:blur(9px)}
+.d-tablet::before{left:3%;right:3%;bottom:-30px;height:70px}
+.d-phone::before{left:-14%;right:-14%;bottom:-24px;height:56px}
+/* reflections (Chrome / Edge / Safari; other browsers simply skip them) */
+.d-tablet,.d-phone{-webkit-box-reflect:below 4px linear-gradient(to bottom,transparent 58%,rgba(255,255,255,.30))}
+.ha-pets{-webkit-box-reflect:below -6px linear-gradient(to bottom,transparent 72%,rgba(255,255,255,.22))}
+/* pets contact shadow */
+.ha-pets-sh{position:absolute;z-index:1;pointer-events:none;border-radius:50%;left:-9%;width:50%;top:63cqw;height:9cqw;
+  background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.42) 0%,rgba(20,45,90,.2) 40%,transparent 72%);filter:blur(7px)}
+@media(max-width:1020px){
+  .ha-ground{top:40cqw;left:-30%;right:-30%}
+  .ha-pets-sh{left:-6%;width:56%;top:61.5cqw;height:8cqw}
+}
+/* softer reflections */
+.d-tablet,.d-phone{-webkit-box-reflect:below 4px linear-gradient(to bottom,transparent 82%,rgba(255,255,255,.16))}
+.ha-pets{-webkit-box-reflect:below -6px linear-gradient(to bottom,transparent 82%,rgba(255,255,255,.12))}
+.ha-ground{left:-34%;right:-14%;top:41cqw;bottom:-4cqw;background:radial-gradient(ellipse 58% 70% at 54% 68%,rgba(255,255,255,.78) 0%,rgba(214,230,246,.58) 42%,rgba(160,192,228,.22) 74%,rgba(160,192,228,0) 100%)}
+.d-tablet::before{background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.5) 0%,rgba(20,45,90,.26) 40%,transparent 72%)}
+.d-phone::before{background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.5) 0%,rgba(20,45,90,.26) 40%,transparent 72%)}
+@media(max-width:1020px){.ha-ground{top:36cqw;left:-20%;right:-20%;bottom:-2cqw}}
+.ha-ground{background:radial-gradient(ellipse 56% 52% at 54% 48%,rgba(255,255,255,.78) 0%,rgba(214,230,246,.58) 44%,rgba(160,192,228,.22) 76%,rgba(160,192,228,0) 100%)}
