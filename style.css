@@ -1902,3 +1902,10 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .platform .sy-i img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(40,70,120,.18))}
 .platform .sys .sys--w .sy-i{width:64px;height:64px}
 @media(max-width:560px){.platform .sy-i{width:46px;height:46px}.platform .sys .sys--w .sy-i{width:50px;height:50px}}
+/* all Simplicity cards: icon left, text right (phones keep the compact stacked layout) */
+@media(min-width:561px){
+  .platform .sys article:not(.sys--w){display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:start;padding:22px 20px}
+  .platform .sys article:not(.sys--w) .sy-i{grid-row:1/3;width:56px;height:56px;margin:0}
+  .platform .sys article:not(.sys--w) h3{margin:2px 0 6px;font-size:1.08rem}
+  .platform .sys article:not(.sys--w) p{margin:0;font-size:.9rem;line-height:1.45}
+}
