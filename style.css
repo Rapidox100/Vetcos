@@ -1808,3 +1808,9 @@ html{scroll-padding-top:90px}
   .hero--v2 .hero__l .ha-pill li{min-width:0}
 }
 @media(min-width:1021px){.hero--v2 .hero__l .ha-pill{gap:clamp(6px,.6vw,12px);padding:10px 16px 10px 12px}.hero--v2 .hero__l .ha-pill li{gap:7px}.hero--v2 .hero__l .ha-ic{width:38px;height:38px}}
+/* pill: one row, grows as long as it needs (may extend in front of the pets) */
+@media(min-width:1021px){
+  .hero--v2 .hero__l .ha-pill{flex-wrap:nowrap;width:max-content;max-width:none;border-radius:999px;gap:clamp(8px,.9vw,18px);padding:10px 22px 10px 14px}
+  .hero--v2 .hero__l .ha-pill li{flex:none;gap:8px}
+  .hero--v2 .hero__l .ha-ic{width:40px;height:40px}
+}
