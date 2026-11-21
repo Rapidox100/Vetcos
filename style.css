@@ -1828,3 +1828,15 @@ html{scroll-padding-top:90px}
 .owner h2 em,.owner h2 em .ch{color:var(--teal)!important}
 .split:hover em,.split:hover em .ch,h1:hover em,h2:hover em,h2:hover em .ch{color:var(--teal)!important}
 .dark .split:hover em .ch{color:inherit}
+
+/* SIMPLICITY + DEMO: hero's light blue background */
+.sec.platform,.platform,.sec.dark.demo,.demo{background:radial-gradient(900px 700px at 100% 0%,rgba(173,214,244,.55),transparent 70%),radial-gradient(700px 500px at 0% 100%,rgba(255,255,255,.9),transparent 70%),linear-gradient(135deg,#f3faff 0%,#e4f3fd 50%,#d6eaf8 100%)!important;background-image:radial-gradient(900px 700px at 100% 0%,rgba(173,214,244,.55),transparent 70%),radial-gradient(700px 500px at 0% 100%,rgba(255,255,255,.9),transparent 70%),linear-gradient(135deg,#f3faff 0%,#e4f3fd 50%,#d6eaf8 100%)!important;color:var(--ink)}
+.demo::before,.platform::before{display:none!important}
+.demo h2,.demo .demo__l h2{color:var(--ink)}
+.demo em,.demo h2 em,.demo h2 em .ch{color:var(--teal)!important}
+.demo .lede{color:#2f4b66}
+.demo .contact,.demo .contact li,.demo .contact a{color:#1a3350}
+.demo .contact a:hover{color:var(--orange)}
+.demo .kick--l{background:#fff;color:var(--teal-d);border:1.5px solid rgba(0,179,181,.4);box-shadow:0 6px 18px rgba(60,120,180,.1)}
+.demo .form{box-shadow:0 22px 56px rgba(60,120,180,.22)}
+.platform .sys article,.platform .sys .sys--w{box-shadow:0 6px 18px rgba(60,120,180,.10)}
