@@ -1933,7 +1933,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .d-phone::before{left:-14%;right:-14%;bottom:-24px;height:56px}
 /* reflections (Chrome / Edge / Safari; other browsers simply skip them) */
 .d-tablet,.d-phone{-webkit-box-reflect:below 4px linear-gradient(to bottom,transparent 58%,rgba(255,255,255,.30))}
-.ha-pets{-webkit-box-reflect:below -6px linear-gradient(to bottom,transparent 72%,rgba(255,255,255,.22))}
 /* pets contact shadow */
 .ha-pets-sh{position:absolute;z-index:1;pointer-events:none;border-radius:50%;left:-9%;width:50%;top:63cqw;height:9cqw;
   background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.42) 0%,rgba(20,45,90,.2) 40%,transparent 72%);filter:blur(7px)}
@@ -1943,9 +1942,12 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 }
 /* softer reflections */
 .d-tablet,.d-phone{-webkit-box-reflect:below 4px linear-gradient(to bottom,transparent 82%,rgba(255,255,255,.16))}
-.ha-pets{-webkit-box-reflect:below -6px linear-gradient(to bottom,transparent 82%,rgba(255,255,255,.12))}
 .ha-ground{left:-34%;right:-14%;top:41cqw;bottom:-4cqw;background:radial-gradient(ellipse 58% 70% at 54% 68%,rgba(255,255,255,.78) 0%,rgba(214,230,246,.58) 42%,rgba(160,192,228,.22) 74%,rgba(160,192,228,0) 100%)}
 .d-tablet::before{background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.5) 0%,rgba(20,45,90,.26) 40%,transparent 72%)}
 .d-phone::before{background:radial-gradient(ellipse at 50% 50%,rgba(20,45,90,.5) 0%,rgba(20,45,90,.26) 40%,transparent 72%)}
 @media(max-width:1020px){.ha-ground{top:36cqw;left:-20%;right:-20%;bottom:-2cqw}}
 .ha-ground{background:radial-gradient(ellipse 56% 52% at 54% 48%,rgba(255,255,255,.78) 0%,rgba(214,230,246,.58) 44%,rgba(160,192,228,.22) 76%,rgba(160,192,228,0) 100%)}
+/* pets: no reflection; tight contact shadow right under the paws and belly */
+.ha-pets-sh{left:-6%;width:46%;top:66.3cqw;height:5.2cqw;filter:blur(4px);
+  background:radial-gradient(ellipse at 50% 50%,rgba(15,35,75,.62) 0%,rgba(15,35,75,.38) 42%,rgba(15,35,75,.12) 70%,transparent 90%)}
+@media(max-width:1020px){.ha-pets-sh{left:-5%;width:54%;top:65.8cqw;height:4.6cqw}}
