@@ -1695,3 +1695,8 @@ html{scroll-padding-top:90px}
 .pnav__logo{opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s ease,transform .35s ease,visibility 0s .35s}
 .pnav.logo-on .pnav__logo{opacity:1;visibility:visible;transform:none;transition:opacity .35s ease,transform .35s ease}
 .pnav__logo:hover{transform:none}
+/* hero logo: tagline as real bold text (the image's thin grey tagline was erased) */
+.hero--v2 .hero__brand{position:relative;container-type:inline-size;width:clamp(190px,62cqw,340px);margin:0 0 clamp(22px,3.4vw,52px)}
+.hero--v2 .hero__brand img{display:block;width:100%;height:auto}
+.hero__brandtag{position:absolute;left:43.5%;top:81%;width:56%;font-family:var(--sans);font-weight:800;font-size:5.1cqw;line-height:1;letter-spacing:.005em;color:#0e2f66;white-space:nowrap}
+@media(max-width:1020px){.hero--v2 .hero__brand{width:min(260px,64vw)}}

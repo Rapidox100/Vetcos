@@ -75,7 +75,7 @@
 
   // Nav logo: hidden at the top (the hero shows the big one), fades in once you scroll past it
   (function () {
-    var nav = $('#nav'), logo = $('.hero__logo');
+    var nav = $('#nav'), logo = $('.hero__brand');
     function check() {
       var limit = logo ? (logo.getBoundingClientRect().bottom + window.scrollY - 70) : 120;
       nav.classList.toggle('logo-on', window.scrollY > limit);
