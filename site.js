@@ -156,14 +156,6 @@
     fg.addEventListener('pointerleave', function () { tr = 0; go(); });
   })();
 
-  // Hero dashboard: scale the 1432x922 canvas to the artwork width
-  (function () {
-    var d = $('#haDash'), st = d && d.parentElement; if (!d) return;
-    function fit() { d.style.setProperty('--ds', (st.clientWidth * 0.788) / 1432); }
-    fit(); window.addEventListener('resize', fit);
-    if (window.ResizeObserver) new ResizeObserver(fit).observe(st);
-  })();
-
   // Why visuals: scale the 660x500 canvases to fit their box
   (function () {
     var box = $('#whyVisual'); if (!box) return;
