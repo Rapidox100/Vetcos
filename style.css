@@ -1687,3 +1687,5 @@ html{scroll-padding-top:90px}
   .hero.hero--v2{container-type:inline-size}
   .hero--v2 h1{font-size:max(2.2rem,4.95cqw)}
 }
+@media(min-width:1021px){.ha-dash{left:12.5%;top:0}}
+.ha-pets{width:50%;left:-3%;top:36.5cqw}

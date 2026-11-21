@@ -159,7 +159,7 @@
   // Hero dashboard: scale the 1432x922 canvas to the artwork width
   (function () {
     var d = $('#haDash'), st = d && d.parentElement; if (!d) return;
-    function fit() { d.style.setProperty('--ds', (st.clientWidth * 0.788) / 1432); }
+    function fit() { d.style.setProperty('--ds', (st.clientWidth * 0.915) / 1432); }
     fit(); window.addEventListener('resize', fit);
     if (window.ResizeObserver) new ResizeObserver(fit).observe(st);
   })();
