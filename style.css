@@ -1775,3 +1775,14 @@ html{scroll-padding-top:90px}
 .phone__scr{position:absolute!important;left:4.15%;top:1.99%;width:91.71%;height:96.02%;min-height:0!important;border-radius:10.5cqw;overflow:hidden;display:flex;flex-direction:column;background:#e9e3da}
 .phone__h{padding:11cqw 4.5cqw 3.6cqw!important}
 @media(max-width:560px){.wa__stage .phone,.phone{width:240px}}
+
+/* hero dashboard phone: same realistic frame */
+.d-phone{width:340px!important;left:1106px!important;height:642px!important;padding:0!important;background:none!important;border-radius:0!important;box-shadow:none!important;filter:drop-shadow(0 20px 26px rgba(40,90,150,.26))}
+.d-phone::after{content:"";position:absolute;inset:0;background:url(assets/phone-frame.webp) center/100% 100% no-repeat;z-index:6;pointer-events:none}
+.d-phone .p-screen{left:4.15%!important;top:1.99%!important;right:auto!important;bottom:auto!important;width:91.71%!important;height:96.02%!important;border-radius:36px!important}
+.d-phone .p-island{display:none}
+.d-phone .p-status b{left:44px;top:19px}
+.d-phone .p-sig{right:34px;top:23px}
+.d-phone .p-menu{right:20px}
+@media(min-width:1021px) and (max-width:1500px){.ha-dash{left:6.2%}}
+@media(min-width:1021px) and (max-width:1500px){.hero--v2 h1{font-size:max(2rem,4.2cqw)}}
