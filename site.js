@@ -154,8 +154,9 @@
         var c = off(card), y1 = c.y + c.h / 2;
         var x1 = side === 'l' ? c.x + c.w : c.x;
         var x2 = side === 'l' ? p.x + 10 : p.x + p.w - 10;
-        var y2 = p.y + p.h * (0.22 + 0.56 * (n === 1 ? .5 : idx / (n - 1)));
-        var dx = (x2 - x1) * .55;
+        var A = side === 'l' ? [0.355, 0.465, 0.565, 0.705] : [0.38, 0.52, 0.68];
+        var y2 = p.y + p.h * A[Math.min(idx, A.length - 1)];
+        var dx = (x2 - x1) * .5;
         out += '<path d="M' + x1 + ' ' + y1 + ' C' + (x1 + dx) + ' ' + y1 + ' ' + (x2 - dx) + ' ' + y2 + ' ' + x2 + ' ' + y2 + '"/>';
         out += '<circle cx="' + x1 + '" cy="' + y1 + '" r="4.5"/>';
       }
