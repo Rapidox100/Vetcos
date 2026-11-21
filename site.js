@@ -297,7 +297,7 @@
       var d = new FormData(form);
       var body = 'Clinic: ' + d.get('clinic') + '\nName: ' + d.get('name') + '\nEmail: ' + d.get('email') +
         '\nPhone: ' + (d.get('phone') || '-') + '\n\n' + (d.get('notes') || '');
-      window.location.href = 'mailto:hello@vetcos.com?subject=' + encodeURIComponent('Demo request: ' + d.get('clinic')) + '&body=' + encodeURIComponent(body);
+      window.location.href = 'mailto:info@smsvetcare.com?subject=' + encodeURIComponent('Demo request: ' + d.get('clinic')) + '&body=' + encodeURIComponent(body);
       note.textContent = 'Thanks! Your email app should open with the request ready to send.';
       note.classList.add('ok');
     });
