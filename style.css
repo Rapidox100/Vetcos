@@ -1864,3 +1864,8 @@ html{scroll-padding-top:90px}
 }
 .foot__b img.foot__logo{background:none;border-radius:0;padding:0;width:150px;height:auto;margin:0 0 14px}
 @media(max-width:560px){.foot__b img.foot__logo{width:130px}}
+
+/* picture-like mockups: not selectable / draggable */
+.hero__art,.hero__art *,.ha-stage,.ha-dash,.ha-dash *,.ha-pets,.phone,.phone *,.insights-visual,.insights-visual *,.why-visual,.why-visual *,.clinic__fig img{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.hero__art img,.phone img,.insights-visual img,.why-visual img,.clinic__fig img{-webkit-user-drag:none;user-drag:none}
+.hero__art ::selection,.phone ::selection,.insights-visual ::selection,.why-visual ::selection{background:transparent}
