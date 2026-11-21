@@ -1881,3 +1881,18 @@ html{scroll-padding-top:90px}
 .reviews-off .story{grid-template-columns:1fr;justify-items:center}
 .reviews-off .story__r{width:min(760px,100%)}
 .reviews-off .secure{margin-top:0}
+
+/* PHONE FIXES */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media(max-width:560px){
+  .hero--v2 .hero__stats{grid-template-columns:1fr;margin-top:6px;border-top:1px solid rgba(70,130,190,.18)}
+  .hero--v2 .hero__stats div,.hero--v2 .hero__stats div+div{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px;padding:13px 2px;border-left:0;text-align:left;border-top:0;border-bottom:1px solid rgba(70,130,190,.14)}
+  .hero--v2 .hero__stats div:last-child{border-bottom:0}
+  .hero--v2 .hero__stats dd{order:0;font-size:1.25rem;line-height:1.15;white-space:nowrap}
+  .hero--v2 .hero__stats dt{margin:0;font-size:.68rem;letter-spacing:.08em;text-align:right}
+}
+@media(max-width:560px){
+  .hero--v2 .hero__stats dt{font-size:.62rem;letter-spacing:.04em;white-space:nowrap}
+  .hero--v2 .hero__stats dd{font-size:1.15rem}
+  .hero__art{margin-top:-14px}
+}
