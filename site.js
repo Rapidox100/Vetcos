@@ -136,6 +136,38 @@
     });
   })();
 
+  // WhatsApp: dotted lines from each card to the phone
+  (function () {
+    var stage = $('#waStage'), svg = $('#waLines'), phone = stage && $('.phone', stage);
+    if (!stage || !svg || !phone) return;
+    function off(el) {            // position relative to the stage, in layout px (unaffected by page zoom)
+      var x = 0, y = 0, e = el;
+      while (e && e !== stage) { x += e.offsetLeft; y += e.offsetTop; e = e.offsetParent; }
+      return { x: x, y: y, w: el.offsetWidth, h: el.offsetHeight };
+    }
+    function draw() {
+      if (window.innerWidth <= 1020) { svg.innerHTML = ''; return; }
+      var W = stage.offsetWidth, H = stage.offsetHeight, p = off(phone), out = '';
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+      var L = $$('.wc[data-side="l"]', stage), R = $$('.wc[data-side="r"]', stage);
+      function link(card, side, idx, n) {
+        var c = off(card), y1 = c.y + c.h / 2;
+        var x1 = side === 'l' ? c.x + c.w : c.x;
+        var x2 = side === 'l' ? p.x + 10 : p.x + p.w - 10;
+        var y2 = p.y + p.h * (0.22 + 0.56 * (n === 1 ? .5 : idx / (n - 1)));
+        var dx = (x2 - x1) * .55;
+        out += '<path d="M' + x1 + ' ' + y1 + ' C' + (x1 + dx) + ' ' + y1 + ' ' + (x2 - dx) + ' ' + y2 + ' ' + x2 + ' ' + y2 + '"/>';
+        out += '<circle cx="' + x1 + '" cy="' + y1 + '" r="4.5"/>';
+      }
+      L.forEach(function (c, i) { link(c, 'l', i, L.length); });
+      R.forEach(function (c, i) { link(c, 'r', i, R.length); });
+      svg.innerHTML = out;
+    }
+    draw(); window.addEventListener('resize', draw);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+    if (window.ResizeObserver) new ResizeObserver(draw).observe(stage);
+  })();
+
   // Dashboard: on small screens scale the full desktop layout to fit (nothing collapses)
   (function () {
     var app = $('.insights-visual'); if (!app) return;
