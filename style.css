@@ -1862,3 +1862,5 @@ html{scroll-padding-top:90px}
   .foot a,.foot span{font-size:.88rem;margin-bottom:5px}
   .foot__bar{flex-direction:column;gap:4px;margin-top:20px}
 }
+.foot__b img.foot__logo{background:none;border-radius:0;padding:0;width:150px;height:auto;margin:0 0 14px}
+@media(max-width:560px){.foot__b img.foot__logo{width:130px}}
