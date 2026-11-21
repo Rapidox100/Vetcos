@@ -1513,3 +1513,96 @@ html{scroll-padding-top:90px}
 .ha-pets{left:-3.5%;bottom:-3.2%;width:60%}
 .ha-pets{top:28.45cqw;bottom:auto;left:-3.5%;width:60%}
 @media(max-width:1020px){.ha-pill{margin-top:1%;background:#fff}}
+
+
+/* =====  HERO DASHBOARD built in HTML (tablet + phone), scaled to its container  ===== */
+.ha-stage{position:relative;aspect-ratio:1738/1157;width:100%}
+.ha-dash{position:absolute;left:20.7%;top:1%;width:1432px;height:922px;transform-origin:0 0;transform:scale(var(--ds,.8));pointer-events:none}
+.d-canvas{position:relative;width:1432px;height:922px;font-family:var(--sans);color:#17358f}
+.d-canvas *{box-sizing:border-box}
+.d-tablet{position:absolute;left:0;top:0;width:1207px;height:890px;background:#171e25;border-radius:64px;box-shadow:inset 0 0 0 3px #2c353d,0 22px 50px rgba(30,70,110,.22);padding:35px 34px 40px 38px}
+.d-screen{position:relative;width:100%;height:100%;background:#f3f9ff;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#f7fbff 0%,#eef6fd 100%)}
+.d-top{position:absolute;left:0;right:0;top:0;height:90px;border-bottom:1px solid #dfeaf4;background:#fbfdff}
+.d-search{position:absolute;left:200px;top:25px;width:713px;height:44px;background:#e7f1fb;border-radius:999px;display:flex;align-items:center;gap:16px;padding:0 20px;color:#1a4aa0;font-size:18px}
+.d-search svg{color:#1d5fc4;flex:none}.d-search span{color:#25427e}
+.d-bell{position:absolute;left:955px;top:22px;color:#1d4fa8}
+.d-me{position:absolute;left:1032px;top:22px;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#f1c9a8 0 26%,transparent 27%),radial-gradient(ellipse at 50% 92%,#7ec3dc 0 42%,transparent 43%),#2b2020;box-shadow:0 0 0 2px #e3eef8}
+.d-side{position:absolute;left:0;top:90px;bottom:0;width:134px;background:#fff;border-right:1px solid #e1ecf6}
+.d-nav{position:absolute;left:12px;width:112px;height:84px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#1f4ba8;font-weight:600;font-size:16.5px}
+.d-nav svg{color:#2058c4}.d-nav.is-on{background:#e1edfb}
+.d-nav span{line-height:1.1}
+.d-main{position:absolute;left:134px;top:90px;right:0;bottom:0}
+.d-card{position:absolute;background:#fff;border:1px solid #e3edf7;border-radius:13px;box-shadow:0 3px 10px rgba(60,120,190,.06)}
+.d-card h4{position:absolute;left:20px;top:14px;margin:0;font-family:var(--sans);font-size:20px;font-weight:700;color:#15338b;letter-spacing:0}
+.d-kpi{display:flex;align-items:center;gap:26px;padding-left:30px}
+.d-kic{flex:none;display:grid;place-items:center;color:#12b3c9}
+.d-kt{display:grid;gap:3px;line-height:1.1}
+.d-kt b{font-size:20px;font-weight:600;color:#1a3a96}
+.d-kt strong{font-size:31px;font-weight:800;color:#15338b;letter-spacing:-.01em}
+.d-kt em{font-style:normal;font-size:21px;font-weight:700;color:#18a34a}
+.d-chart{position:absolute;left:62px;top:56px;width:330px;height:150px}
+.d-trend{position:absolute;left:0;top:-8px}
+.d-chart i{position:absolute;font-style:normal;font-size:15px;color:#1a3a7e}
+.d-chart i:nth-of-type(-n+5){left:-34px;transform:translateY(-50%);width:28px;text-align:right}
+.d-chart i{margin-top:-40px}
+.d-chart i:nth-of-type(n+6){top:140px!important;transform:translateX(-50%);margin-top:0}
+.d-donut{position:absolute;left:14px;top:54px}
+.d-leg{position:absolute;left:162px;top:58px;width:150px;height:150px}
+.d-lg{position:absolute;left:0;right:0;display:flex;align-items:center;gap:8px;font-size:14.5px;color:#25427e;white-space:nowrap}
+.d-lg i{width:12px;height:12px;border-radius:50%;flex:none}.d-lg span{flex:1}.d-lg b{font-weight:500;color:#25427e}
+.d-qa{position:absolute;left:20px;display:flex;align-items:center;gap:16px;font-size:16.5px;font-weight:600;color:#15338b;white-space:nowrap}
+.d-qa svg{color:#1d5fc4;flex:none}
+.d-qa2{left:24px;font-size:20px;gap:24px}
+.d-qa2::after{content:"";position:absolute;left:-4px;right:-336px;bottom:-13px;height:1px;background:#e3edf7}
+.d-pr{position:absolute;left:20px;right:18px;height:46px;display:flex;align-items:center;gap:14px;font-size:17px;color:#1a3a96;border-bottom:1px solid #e9f0f7}
+.d-pr:last-child{border-bottom:0}
+.d-av{width:50px;height:46px;border-radius:50%;flex:none;box-shadow:inset 0 -10px 14px rgba(0,0,0,.18),inset 0 8px 10px rgba(255,255,255,.28)}
+.d-pn{flex:1;min-width:0;white-space:nowrap}.d-pn b{font-weight:800;color:#15338b}
+.d-st{padding:4px 18px;border-radius:999px;font-size:16px;white-space:nowrap;width:108px;text-align:center}
+.d-st--g{background:#d9f3d3;color:#2a8a4a}.d-st--b{background:#d4ebfb;color:#2a6fb0}
+.d-tm{width:132px;text-align:left;font-size:16px;color:#1f3f8a}
+/* phone */
+.d-phone{position:absolute;left:1120px;top:280px;width:312px;height:642px;background:#12171d;border-radius:62px;padding:14px;box-shadow:inset 0 0 0 3px #3a424a,0 22px 44px rgba(30,70,110,.28)}
+.p-screen{position:relative;width:100%;height:100%;background:#fff;border-radius:48px;overflow:hidden}
+.p-status{position:absolute;left:0;right:0;top:0;height:56px}
+.p-status b{position:absolute;left:36px;top:15px;font-size:14px;font-weight:700;color:#111}
+.p-island{position:absolute;left:50%;top:10px;width:108px;height:28px;margin-left:-54px;background:#0a0d10;border-radius:20px}
+.p-sig{position:absolute;right:28px;top:19px;width:44px;height:12px;background:linear-gradient(90deg,#111 0 26%,transparent 26% 34%,#111 34% 62%,transparent 62% 70%,#111 70%);border-radius:3px;opacity:.85}
+.p-menu{position:absolute;right:16px;top:52px}
+.p-card{position:absolute;left:10px;right:10px;background:#fff;border:1px solid #e6eef6;border-radius:10px;box-shadow:0 2px 8px rgba(60,120,190,.07);display:flex;align-items:center;gap:16px;padding-left:20px}
+.p-ic{flex:none;display:grid;place-items:center}
+.p-t{display:grid;gap:2px;line-height:1.1}
+.p-t b{font-size:15px;font-weight:600;color:#1a3a96}
+.p-t strong{font-size:23px;font-weight:800;color:#15338b}
+.p-t em{font-style:normal;font-size:15.5px;font-weight:700;color:#18a34a}
+.p-trend{display:block;padding:0}
+.p-trend h4{position:absolute;left:14px;top:10px;margin:0;font-family:var(--sans);font-size:16px;font-weight:700;color:#15338b}
+.p-spark{position:absolute;left:20px;top:42px}
+.p-x{position:absolute;left:14px;right:12px;bottom:8px;display:flex;justify-content:space-between}
+.p-x i{font-style:normal;font-size:11.5px;color:#1a3a7e}
+.p-nav{position:absolute;left:0;right:0;bottom:30px;height:66px;background:#fff;border-top:1px solid #e6eef6;display:flex;justify-content:space-around;align-items:center;padding:0 6px}
+.p-n{display:flex;flex-direction:column;align-items:center;gap:1px;color:#2058c4;font-size:11.5px;font-weight:600}
+.p-n.is-on{color:#1a73e8}
+.p-n svg{width:30px;height:30px}
+.p-bar{position:absolute;left:50%;bottom:10px;width:112px;height:5px;margin-left:-56px;border-radius:3px;background:#0d1117}
+/* tablet/phone widths: art keeps its aspect ratio everywhere */
+@media(max-width:1020px){.hero__art .ha-stage{margin:0}}
+/* dashboard coordinate fixes */
+.d-main{left:-38px;top:-35px;right:auto;bottom:auto;width:1207px;height:890px;pointer-events:none}
+.d-side .d-nav{margin-top:-125px}
+.d-kt b{white-space:nowrap;font-size:19px}
+.d-kpi{gap:22px}
+.p-nav{bottom:17px;height:62px}
+.p-bar{bottom:5px}
+.p-trend{height:158px}
+/* recent patients: roomier rows + real pet faces */
+.d-pr{gap:12px;font-size:16px}
+.d-pn{font-size:16px}
+.d-st{width:104px;padding:4px 8px;font-size:15px}
+.d-tm{width:122px;font-size:15px}
+.d-av{width:46px!important;height:46px!important;background-repeat:no-repeat!important;background-color:#f1e3cf!important;box-shadow:0 0 0 2px #fff,0 1px 4px rgba(0,0,0,.15)!important}
+.d-card .d-pr:nth-child(2) .d-av{background-image:url(assets/hero-pets-clean.webp)!important;background-size:125px auto!important;background-position:-19px -1px!important}
+.d-card .d-pr:nth-child(3) .d-av{background-image:url(assets/hero-pets-clean.webp)!important;background-size:250px auto!important;background-position:-121px -53px!important}
+.d-card .d-pr:nth-child(4) .d-av{background-image:url(assets/hero-pets-clean.webp)!important;background-size:125px auto!important;background-position:-19px -1px!important;filter:brightness(.55) saturate(1.1) contrast(1.1)}
+.d-card .d-pr:nth-child(5) .d-av{background-image:url(assets/hero-pets-clean.webp)!important;background-size:250px auto!important;background-position:-121px -53px!important;filter:hue-rotate(-8deg) brightness(.92)}
+@media(min-width:1021px){.ha-pets{z-index:3}}
