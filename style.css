@@ -1798,3 +1798,7 @@ html{scroll-padding-top:90px}
 /* WhatsApp phone back to its earlier (wider) size */
 .wa__stage .phone,.phone{width:290px;aspect-ratio:780/1471}
 @media(max-width:560px){.wa__stage .phone,.phone{width:240px}}
+@media(min-width:1021px){
+  .ha-pets{left:-10%}
+  .d-phone{top:345px!important}
+}
